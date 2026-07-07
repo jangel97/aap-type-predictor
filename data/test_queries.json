@@ -1,0 +1,479 @@
+[
+  {
+    "id": "list_job_templates",
+    "category": "clean",
+    "query": "List all job templates on the platform",
+    "source_type": "Platform",
+    "target_type": "JobTemplate",
+    "expected_tools": [
+      "controller.job_templates_list"
+    ]
+  },
+  {
+    "id": "launch_job_template",
+    "category": "clean",
+    "query": "Launch the deploy-webserver job template",
+    "source_type": "JobTemplate",
+    "target_type": "Job",
+    "expected_tools": [
+      "controller.job_templates_jobs_list"
+    ]
+  },
+  {
+    "id": "get_job_stdout",
+    "category": "clean",
+    "query": "Show me the output logs from job 4521",
+    "source_type": "Job",
+    "target_type": "UnifiedJobStdout",
+    "expected_tools": [
+      "controller.jobs_stdout_retrieve"
+    ]
+  },
+  {
+    "id": "list_inventory_hosts",
+    "category": "clean",
+    "query": "List the hosts in the production inventory",
+    "source_type": "Inventory",
+    "target_type": "Host",
+    "expected_tools": [
+      "controller.inventories_hosts_list"
+    ]
+  },
+  {
+    "id": "list_credentials",
+    "category": "clean",
+    "query": "Show me all credentials on the platform",
+    "source_type": "Platform",
+    "target_type": "Credential",
+    "expected_tools": [
+      "controller.credentials_list"
+    ]
+  },
+  {
+    "id": "list_projects",
+    "category": "clean",
+    "query": "List all projects in the automation platform",
+    "source_type": "Platform",
+    "target_type": "Project",
+    "expected_tools": [
+      "controller.projects_list"
+    ]
+  },
+  {
+    "id": "list_eda_activations",
+    "category": "clean",
+    "query": "Show the EDA activations currently configured",
+    "source_type": "Platform",
+    "target_type": "Activation",
+    "expected_tools": [
+      "eda.activations_list"
+    ]
+  },
+  {
+    "id": "list_template_schedules",
+    "category": "clean",
+    "query": "What schedules are configured for the nightly-backup job template?",
+    "source_type": "JobTemplate",
+    "target_type": "Schedule",
+    "expected_tools": [
+      "controller.job_templates_schedules_list"
+    ]
+  },
+  {
+    "id": "list_instance_groups",
+    "category": "clean",
+    "query": "Show the instance groups in the controller",
+    "source_type": "Platform",
+    "target_type": "InstanceGroup",
+    "expected_tools": [
+      "controller.instance_groups_list"
+    ]
+  },
+  {
+    "id": "list_org_teams",
+    "category": "clean",
+    "query": "List the teams in the engineering organization",
+    "source_type": "Organization",
+    "target_type": "Team",
+    "expected_tools": [
+      "controller.organizations_teams_list"
+    ]
+  },
+  {
+    "id": "get_host_facts",
+    "category": "clean",
+    "query": "Get the gathered facts for host prod-db-01",
+    "source_type": "Host",
+    "target_type": "AnsibleFacts",
+    "expected_tools": [
+      "controller.hosts_ansible_facts_retrieve"
+    ]
+  },
+  {
+    "id": "list_workflow_templates",
+    "category": "clean",
+    "query": "List all workflow job templates",
+    "source_type": "Platform",
+    "target_type": "WorkflowJobTemplate",
+    "expected_tools": [
+      "controller.workflow_job_templates_list"
+    ]
+  },
+  {
+    "id": "get_inventory_sources",
+    "category": "clean",
+    "query": "Show the inventory sources for the cloud inventory",
+    "source_type": "Inventory",
+    "target_type": "InventorySource",
+    "expected_tools": [
+      "controller.inventories_inventory_sources_list"
+    ]
+  },
+  {
+    "id": "list_notification_templates",
+    "category": "clean",
+    "query": "List all notification templates on the platform",
+    "source_type": "Platform",
+    "target_type": "NotificationTemplate",
+    "expected_tools": [
+      "controller.notification_templates_list"
+    ]
+  },
+  {
+    "id": "get_project_playbooks",
+    "category": "clean",
+    "query": "Show the available playbooks in the infra-automation project",
+    "source_type": "Project",
+    "target_type": "ProjectPlaybooks",
+    "expected_tools": [
+      "controller.projects_playbooks_retrieve"
+    ]
+  },
+  {
+    "id": "job_template_events",
+    "category": "multihop",
+    "query": "Show the events from the last run of the deploy-app job template",
+    "source_type": "JobTemplate",
+    "target_type": "JobEvent",
+    "expected_tools": [
+      "controller.job_templates_jobs_list",
+      "controller.jobs_job_events_list"
+    ]
+  },
+  {
+    "id": "job_template_host_summaries",
+    "category": "multihop",
+    "query": "Get the per-host summaries from the patching job template's latest run",
+    "source_type": "JobTemplate",
+    "target_type": "JobHostSummary",
+    "expected_tools": [
+      "controller.job_templates_jobs_list",
+      "controller.jobs_job_host_summaries_list"
+    ]
+  },
+  {
+    "id": "inventory_host_facts",
+    "category": "multihop",
+    "query": "Show the gathered facts for hosts in the staging inventory",
+    "source_type": "Inventory",
+    "target_type": "AnsibleFacts",
+    "expected_tools": [
+      "controller.inventories_hosts_list",
+      "controller.hosts_ansible_facts_retrieve"
+    ]
+  },
+  {
+    "id": "org_inventories_hosts",
+    "category": "multihop",
+    "query": "List all hosts across inventories in the operations organization",
+    "source_type": "Organization",
+    "target_type": "Host",
+    "expected_tools": [
+      "controller.organizations_inventories_list",
+      "controller.inventories_hosts_list"
+    ]
+  },
+  {
+    "id": "activation_instance_logs",
+    "category": "multihop",
+    "query": "Get the logs from the running instances of the network-monitor activation",
+    "source_type": "Activation",
+    "target_type": "ActivationInstanceLog",
+    "expected_tools": [
+      "eda.activations_instances_list",
+      "eda.activation_instances_logs_list"
+    ]
+  },
+  {
+    "id": "platform_playbooks",
+    "category": "multihop",
+    "query": "Show the playbooks available across all projects on the platform",
+    "source_type": "Platform",
+    "target_type": "ProjectPlaybooks",
+    "expected_tools": [
+      "controller.projects_list",
+      "controller.projects_playbooks_retrieve"
+    ]
+  },
+  {
+    "id": "template_job_stdout",
+    "category": "multihop",
+    "query": "Get the standard output from the most recent job launched by the nightly-backup template",
+    "source_type": "JobTemplate",
+    "target_type": "UnifiedJobStdout",
+    "expected_tools": [
+      "controller.job_templates_jobs_list",
+      "controller.jobs_stdout_retrieve"
+    ]
+  },
+  {
+    "id": "org_credentials",
+    "category": "multihop",
+    "query": "What credentials does the engineering org have configured?",
+    "source_type": "Organization",
+    "target_type": "Credential",
+    "expected_tools": [
+      "controller.organizations_credentials_list"
+    ]
+  },
+  {
+    "id": "audit_rule_actions",
+    "category": "multihop",
+    "query": "Show the actions triggered by the disk-space-warning audit rule",
+    "source_type": "AuditRule",
+    "target_type": "AuditAction",
+    "expected_tools": [
+      "eda.audit_rules_actions_list"
+    ]
+  },
+  {
+    "id": "host_activity",
+    "category": "multihop",
+    "query": "Show the activity stream for host web-server-01",
+    "source_type": "Host",
+    "target_type": "ActivityStream",
+    "expected_tools": [
+      "controller.hosts_activity_stream_list"
+    ]
+  },
+  {
+    "id": "synonym_machines",
+    "category": "synonym",
+    "query": "What machines are managed in the production inventory?",
+    "source_type": "Inventory",
+    "target_type": "Host",
+    "expected_tools": [
+      "controller.inventories_hosts_list"
+    ]
+  },
+  {
+    "id": "synonym_recipes",
+    "category": "synonym",
+    "query": "Show the automation recipes available in the network project",
+    "source_type": "Project",
+    "target_type": "ProjectPlaybooks",
+    "expected_tools": [
+      "controller.projects_playbooks_retrieve"
+    ]
+  },
+  {
+    "id": "synonym_runtimes",
+    "category": "synonym",
+    "query": "What container runtimes are available for running automation?",
+    "source_type": "Platform",
+    "target_type": "ExecutionEnvironment",
+    "expected_tools": [
+      "controller.execution_environments_list"
+    ]
+  },
+  {
+    "id": "synonym_alerts",
+    "category": "synonym",
+    "query": "Show me the alert channel configurations on the platform",
+    "source_type": "Platform",
+    "target_type": "NotificationTemplate",
+    "expected_tools": [
+      "controller.notification_templates_list"
+    ]
+  },
+  {
+    "id": "synonym_event_handlers",
+    "category": "synonym",
+    "query": "What event-driven handlers are currently active?",
+    "source_type": "Platform",
+    "target_type": "Activation",
+    "expected_tools": [
+      "eda.activations_list"
+    ]
+  },
+  {
+    "id": "synonym_secrets",
+    "category": "synonym",
+    "query": "List the stored secrets and access keys on the platform",
+    "source_type": "Platform",
+    "target_type": "Credential",
+    "expected_tools": [
+      "controller.credentials_list"
+    ]
+  },
+  {
+    "id": "synonym_node_groups",
+    "category": "synonym",
+    "query": "Show the capacity pools for automation execution",
+    "source_type": "Platform",
+    "target_type": "InstanceGroup",
+    "expected_tools": [
+      "controller.instance_groups_list"
+    ]
+  },
+  {
+    "id": "ambiguous_platform_activity",
+    "category": "ambiguous",
+    "query": "What is happening on the platform right now?",
+    "source_type": "Platform",
+    "target_type": "ActivityStream",
+    "expected_tools": [
+      "controller.activity_stream_list"
+    ]
+  },
+  {
+    "id": "ambiguous_deploy_status",
+    "category": "ambiguous",
+    "query": "Is the deploy running?",
+    "source_type": "Platform",
+    "target_type": "Job",
+    "expected_tools": [
+      "controller.jobs_list"
+    ]
+  },
+  {
+    "id": "ambiguous_about_host",
+    "category": "ambiguous",
+    "query": "Tell me about the database server",
+    "source_type": "Host",
+    "target_type": "AnsibleFacts",
+    "expected_tools": [
+      "controller.hosts_ansible_facts_retrieve"
+    ]
+  },
+  {
+    "id": "ambiguous_project_state",
+    "category": "ambiguous",
+    "query": "What's the status of the infrastructure project?",
+    "source_type": "Project",
+    "target_type": "ProjectUpdate",
+    "expected_tools": [
+      "controller.projects_project_updates_list"
+    ]
+  },
+  {
+    "id": "ambiguous_who_access",
+    "category": "ambiguous",
+    "query": "Who has access to this?",
+    "source_type": "Platform",
+    "target_type": "User",
+    "expected_tools": [
+      "controller.users_list"
+    ]
+  },
+  {
+    "id": "noisy_backup_failed",
+    "category": "noisy",
+    "query": "Hey, the nightly backup job failed again. Can you grab the logs so I can see what went wrong?",
+    "source_type": "Job",
+    "target_type": "UnifiedJobStdout",
+    "expected_tools": [
+      "controller.jobs_stdout_retrieve"
+    ]
+  },
+  {
+    "id": "noisy_host_broken",
+    "category": "noisy",
+    "query": "Something is weird with prod-db-01, check what Ansible knows about that host",
+    "source_type": "Host",
+    "target_type": "AnsibleFacts",
+    "expected_tools": [
+      "controller.hosts_ansible_facts_retrieve"
+    ]
+  },
+  {
+    "id": "noisy_cancel_job",
+    "category": "noisy",
+    "query": "The patching job has been running for two hours. Something is stuck. Cancel it please",
+    "source_type": "Job",
+    "target_type": "JobCancel",
+    "expected_tools": [
+      "controller.jobs_cancel_retrieve"
+    ]
+  },
+  {
+    "id": "noisy_cred_wrong",
+    "category": "noisy",
+    "query": "A credential seems to be wrong, can you list the machine credentials so I can check which one?",
+    "source_type": "Platform",
+    "target_type": "Credential",
+    "expected_tools": [
+      "controller.credentials_list"
+    ]
+  },
+  {
+    "id": "noisy_audit_team",
+    "category": "noisy",
+    "query": "We need to audit who has access to what in the engineering org. Start by listing the teams.",
+    "source_type": "Organization",
+    "target_type": "Team",
+    "expected_tools": [
+      "controller.organizations_teams_list"
+    ]
+  },
+  {
+    "id": "multipath_org_inventories",
+    "category": "multipath",
+    "query": "What inventories are in the engineering organization?",
+    "source_type": "Organization",
+    "target_type": "Inventory",
+    "expected_tools": [
+      "controller.organizations_inventories_list"
+    ]
+  },
+  {
+    "id": "multipath_org_projects",
+    "category": "multipath",
+    "query": "Show all projects belonging to the platform-team organization",
+    "source_type": "Organization",
+    "target_type": "Project",
+    "expected_tools": [
+      "controller.organizations_projects_list"
+    ]
+  },
+  {
+    "id": "multipath_group_hosts",
+    "category": "multipath",
+    "query": "List the hosts in the webservers group",
+    "source_type": "Group",
+    "target_type": "Host",
+    "expected_tools": [
+      "controller.groups_all_hosts_list"
+    ]
+  },
+  {
+    "id": "multipath_template_credentials",
+    "category": "multipath",
+    "query": "What credentials are assigned to the deploy-webserver job template?",
+    "source_type": "JobTemplate",
+    "target_type": "Credential",
+    "expected_tools": [
+      "controller.job_templates_credentials_list"
+    ]
+  },
+  {
+    "id": "multipath_template_labels",
+    "category": "multipath",
+    "query": "Show the labels on the patching workflow template",
+    "source_type": "WorkflowJobTemplate",
+    "target_type": "Label",
+    "expected_tools": [
+      "controller.workflow_job_templates_labels_list"
+    ]
+  }
+]
