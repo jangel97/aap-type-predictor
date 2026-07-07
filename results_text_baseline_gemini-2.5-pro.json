@@ -1,0 +1,723 @@
+{
+  "model": "gemini-2.5-pro",
+  "strategy": "text_baseline",
+  "n_tools": 1060,
+  "n_queries": 47,
+  "precision": 0.5585106382978723,
+  "recall": 0.8723404255319149,
+  "f1": 0.6638297872340425,
+  "hallucinated_total": 0,
+  "per_query": [
+    {
+      "id": "list_job_templates",
+      "category": "clean",
+      "expected": [
+        "controller.job_templates_list"
+      ],
+      "predicted": [
+        "controller.job_templates_list"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "launch_job_template",
+      "category": "clean",
+      "expected": [
+        "controller.job_templates_jobs_list"
+      ],
+      "predicted": [
+        "controller.job_templates_retrieve",
+        "controller.job_templates_launch_create"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "get_job_stdout",
+      "category": "clean",
+      "expected": [
+        "controller.jobs_stdout_retrieve"
+      ],
+      "predicted": [
+        "controller.jobs_retrieve",
+        "controller.jobs_stdout_retrieve"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "list_inventory_hosts",
+      "category": "clean",
+      "expected": [
+        "controller.inventories_hosts_list"
+      ],
+      "predicted": [
+        "controller.inventories_hosts_list",
+        "controller.inventories_retrieve"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "list_credentials",
+      "category": "clean",
+      "expected": [
+        "controller.credentials_list"
+      ],
+      "predicted": [
+        "controller.credentials_list",
+        "eda.eda_credentials_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "list_projects",
+      "category": "clean",
+      "expected": [
+        "controller.projects_list"
+      ],
+      "predicted": [
+        "controller.projects_list",
+        "eda.projects_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "list_eda_activations",
+      "category": "clean",
+      "expected": [
+        "eda.activations_list"
+      ],
+      "predicted": [
+        "eda.activations_list"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "list_template_schedules",
+      "category": "clean",
+      "expected": [
+        "controller.job_templates_schedules_list"
+      ],
+      "predicted": [
+        "controller.job_templates_retrieve",
+        "controller.job_templates_schedules_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "list_instance_groups",
+      "category": "clean",
+      "expected": [
+        "controller.instance_groups_list"
+      ],
+      "predicted": [
+        "controller.instance_groups_list"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "list_org_teams",
+      "category": "clean",
+      "expected": [
+        "controller.organizations_teams_list"
+      ],
+      "predicted": [
+        "controller.organizations_retrieve",
+        "controller.organizations_teams_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "get_host_facts",
+      "category": "clean",
+      "expected": [
+        "controller.hosts_ansible_facts_retrieve"
+      ],
+      "predicted": [
+        "controller.hosts_retrieve",
+        "controller.hosts_ansible_facts_retrieve"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "list_workflow_templates",
+      "category": "clean",
+      "expected": [
+        "controller.workflow_job_templates_list"
+      ],
+      "predicted": [
+        "controller.workflow_job_templates_list"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "get_inventory_sources",
+      "category": "clean",
+      "expected": [
+        "controller.inventories_inventory_sources_list"
+      ],
+      "predicted": [
+        "controller.inventories_retrieve",
+        "controller.inventories_inventory_sources_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "list_notification_templates",
+      "category": "clean",
+      "expected": [
+        "controller.notification_templates_list"
+      ],
+      "predicted": [
+        "controller.notification_templates_list"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "get_project_playbooks",
+      "category": "clean",
+      "expected": [
+        "controller.projects_playbooks_retrieve"
+      ],
+      "predicted": [
+        "controller.projects_retrieve",
+        "controller.projects_playbooks_retrieve"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "job_template_events",
+      "category": "multihop",
+      "expected": [
+        "controller.job_templates_jobs_list",
+        "controller.jobs_job_events_list"
+      ],
+      "predicted": [
+        "controller.job_templates_jobs_list",
+        "controller.jobs_job_events_list",
+        "controller.job_templates_retrieve"
+      ],
+      "hallucinated": [],
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "id": "job_template_host_summaries",
+      "category": "multihop",
+      "expected": [
+        "controller.job_templates_jobs_list",
+        "controller.jobs_job_host_summaries_list"
+      ],
+      "predicted": [
+        "controller.job_templates_retrieve",
+        "controller.job_templates_jobs_list",
+        "controller.jobs_job_host_summaries_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "id": "inventory_host_facts",
+      "category": "multihop",
+      "expected": [
+        "controller.inventories_hosts_list",
+        "controller.hosts_ansible_facts_retrieve"
+      ],
+      "predicted": [
+        "controller.inventories_retrieve",
+        "controller.inventories_hosts_list",
+        "controller.hosts_ansible_facts_retrieve"
+      ],
+      "hallucinated": [],
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "id": "org_inventories_hosts",
+      "category": "multihop",
+      "expected": [
+        "controller.organizations_inventories_list",
+        "controller.inventories_hosts_list"
+      ],
+      "predicted": [
+        "controller.organizations_retrieve",
+        "controller.organizations_inventories_list",
+        "controller.inventories_hosts_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "id": "activation_instance_logs",
+      "category": "multihop",
+      "expected": [
+        "eda.activations_instances_list",
+        "eda.activation_instances_logs_list"
+      ],
+      "predicted": [
+        "eda.activations_retrieve",
+        "eda.activations_instances_list",
+        "eda.activation_instances_logs_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "id": "platform_playbooks",
+      "category": "multihop",
+      "expected": [
+        "controller.projects_list",
+        "controller.projects_playbooks_retrieve"
+      ],
+      "predicted": [
+        "controller.projects_list",
+        "controller.projects_playbooks_retrieve"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "template_job_stdout",
+      "category": "multihop",
+      "expected": [
+        "controller.job_templates_jobs_list",
+        "controller.jobs_stdout_retrieve"
+      ],
+      "predicted": [
+        "controller.job_templates_jobs_list",
+        "controller.job_templates_retrieve",
+        "controller.jobs_stdout_retrieve"
+      ],
+      "hallucinated": [],
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "id": "org_credentials",
+      "category": "multihop",
+      "expected": [
+        "controller.organizations_credentials_list"
+      ],
+      "predicted": [
+        "controller.organizations_retrieve",
+        "controller.organizations_credentials_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "audit_rule_actions",
+      "category": "multihop",
+      "expected": [
+        "eda.audit_rules_actions_list"
+      ],
+      "predicted": [
+        "eda.audit_rules_actions_list",
+        "eda.audit_rules_retrieve"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "host_activity",
+      "category": "multihop",
+      "expected": [
+        "controller.hosts_activity_stream_list"
+      ],
+      "predicted": [
+        "controller.hosts_retrieve",
+        "controller.hosts_activity_stream_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "synonym_machines",
+      "category": "synonym",
+      "expected": [
+        "controller.inventories_hosts_list"
+      ],
+      "predicted": [
+        "controller.inventories_retrieve",
+        "controller.inventories_hosts_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "synonym_recipes",
+      "category": "synonym",
+      "expected": [
+        "controller.projects_playbooks_retrieve"
+      ],
+      "predicted": [
+        "controller.projects_retrieve",
+        "controller.projects_playbooks_retrieve"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "synonym_runtimes",
+      "category": "synonym",
+      "expected": [
+        "controller.execution_environments_list"
+      ],
+      "predicted": [
+        "controller.execution_environments_list",
+        "eda.decision_environments_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "synonym_alerts",
+      "category": "synonym",
+      "expected": [
+        "controller.notification_templates_list"
+      ],
+      "predicted": [
+        "controller.notification_templates_list"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "synonym_event_handlers",
+      "category": "synonym",
+      "expected": [
+        "eda.activations_list"
+      ],
+      "predicted": [
+        "eda.activations_list"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "synonym_secrets",
+      "category": "synonym",
+      "expected": [
+        "controller.credentials_list"
+      ],
+      "predicted": [
+        "controller.credentials_list",
+        "eda.eda_credentials_list",
+        "gateway.tokens_list",
+        "gateway.service_keys_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4
+    },
+    {
+      "id": "synonym_node_groups",
+      "category": "synonym",
+      "expected": [
+        "controller.instance_groups_list"
+      ],
+      "predicted": [
+        "controller.instance_groups_list"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "ambiguous_platform_activity",
+      "category": "ambiguous",
+      "expected": [
+        "controller.activity_stream_list"
+      ],
+      "predicted": [
+        "controller.unified_jobs_list",
+        "controller.activity_stream_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "ambiguous_deploy_status",
+      "category": "ambiguous",
+      "expected": [
+        "controller.jobs_list"
+      ],
+      "predicted": [
+        "controller.unified_jobs_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "ambiguous_about_host",
+      "category": "ambiguous",
+      "expected": [
+        "controller.hosts_ansible_facts_retrieve"
+      ],
+      "predicted": [
+        "controller.settings_retrieve"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "ambiguous_project_state",
+      "category": "ambiguous",
+      "expected": [
+        "controller.projects_project_updates_list"
+      ],
+      "predicted": [
+        "controller.projects_list",
+        "controller.projects_project_updates_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "ambiguous_who_access",
+      "category": "ambiguous",
+      "expected": [
+        "controller.users_list"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "noisy_backup_failed",
+      "category": "noisy",
+      "expected": [
+        "controller.jobs_stdout_retrieve"
+      ],
+      "predicted": [
+        "controller.jobs_retrieve",
+        "controller.jobs_stdout_retrieve"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "noisy_host_broken",
+      "category": "noisy",
+      "expected": [
+        "controller.hosts_ansible_facts_retrieve"
+      ],
+      "predicted": [
+        "controller.hosts_retrieve",
+        "controller.hosts_ansible_facts_retrieve"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "noisy_cancel_job",
+      "category": "noisy",
+      "expected": [
+        "controller.jobs_cancel_retrieve"
+      ],
+      "predicted": [
+        "controller.unified_jobs_list",
+        "controller.jobs_cancel_create",
+        "controller.workflow_jobs_cancel_create",
+        "controller.system_jobs_cancel_create",
+        "controller.project_updates_cancel_create",
+        "controller.inventory_updates_cancel_create",
+        "controller.ad_hoc_commands_cancel_create"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "noisy_cred_wrong",
+      "category": "noisy",
+      "expected": [
+        "controller.credentials_list"
+      ],
+      "predicted": [
+        "controller.credentials_list"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "noisy_audit_team",
+      "category": "noisy",
+      "expected": [
+        "controller.organizations_teams_list"
+      ],
+      "predicted": [
+        "controller.organizations_retrieve",
+        "controller.organizations_teams_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "multipath_org_inventories",
+      "category": "multipath",
+      "expected": [
+        "controller.organizations_inventories_list"
+      ],
+      "predicted": [
+        "controller.organizations_retrieve",
+        "controller.organizations_inventories_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "multipath_org_projects",
+      "category": "multipath",
+      "expected": [
+        "controller.organizations_projects_list"
+      ],
+      "predicted": [
+        "controller.organizations_retrieve",
+        "controller.organizations_projects_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "multipath_group_hosts",
+      "category": "multipath",
+      "expected": [
+        "controller.groups_all_hosts_list"
+      ],
+      "predicted": [
+        "controller.groups_retrieve",
+        "controller.groups_hosts_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "multipath_template_credentials",
+      "category": "multipath",
+      "expected": [
+        "controller.job_templates_credentials_list"
+      ],
+      "predicted": [
+        "controller.job_templates_retrieve",
+        "controller.job_templates_credentials_list"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "multipath_template_labels",
+      "category": "multipath",
+      "expected": [
+        "controller.workflow_job_templates_labels_list"
+      ],
+      "predicted": [
+        "controller.workflow_job_templates_labels_list",
+        "controller.workflow_job_templates_retrieve"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    }
+  ]
+}

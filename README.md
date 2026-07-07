@@ -56,6 +56,28 @@ The model's confidence (min of source and target softmax max) enables selective 
 | 0.80 | 83% | 1.00 | 1.00 | 1.00 |
 | 0.90 | 72% | 1.00 | 1.00 | 1.00 |
 
+### Entity pruning
+
+Type prediction acts as a pruning step: predicting the source type alone eliminates most tools from consideration before graph search begins.
+
+| Source type | Tools reachable | Pruned |
+|---|---|---|
+| AuditRule | 2 | 99.8% |
+| Activation | 7 | 99.3% |
+| Job | 14 | 98.7% |
+| Host | 16 | 98.5% |
+| Group | 18 | 98.3% |
+| Inventory | 24 | 97.7% |
+| Project | 26 | 97.5% |
+| WorkflowJobTemplate | 26 | 97.5% |
+| JobTemplate | 28 | 97.4% |
+| Organization | 37 | 96.5% |
+| Platform | 206 | 80.6% |
+
+Across the 47 test queries, the median source type reaches 28 tools (97.4% pruned). Even Platform — the most connected type, serving as the entry point for all listing queries — prunes 80.6% of the catalog. When both source and target types are known, the candidate set typically narrows to 0-3 tools, making resolution near-exact.
+
+This is why the architecture scales: doubling the tool count (536 on Stripe -> 1,060 on AAP) has no effect on the classifier — it always predicts over the same 79 entity types. The pruning ratio actually improves as the catalog grows, since the type vocabulary stays fixed while the tool count increases.
+
 ## Usage
 
 ```bash
