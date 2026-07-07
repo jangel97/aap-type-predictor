@@ -167,7 +167,7 @@ Training: 300 epochs per fold, cosine LR schedule (1e-3 -> 1e-5), sqrt-scaled cl
 
 ## Comparison with Stripe
 
-This is a companion repo to [stripe-type-predictor](https://github.com/jmorenas/stripe-type-predictor), which demonstrates the same architecture on the Stripe API (536 tools, 163 entity types). Together they show that Typed Composition Search generalizes across domains:
+This is a companion repo to [stripe-type-predictor](https://github.com/jangel97/stripe-type-predictor), which demonstrates the same architecture on the Stripe API (536 tools, 163 entity types). Together they show that Typed Composition Search generalizes across domains:
 
 | | Stripe | AAP |
 |---|---|---|
