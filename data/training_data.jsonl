@@ -9701,3 +9701,365 @@
 {"query": "I'm having trouble with the service key for the dev server\u2014can you fix it?", "source_type": "ServiceKey", "target_type": "ServiceKey", "style": "paraphrase"}
 {"query": "Show the organizations from this role", "source_type": "Role", "target_type": "Organization", "style": "multihop"}
 {"query": "Get the inventory source updates linked to this project", "source_type": "Project", "target_type": "InventorySourceUpdate", "style": "template"}
+{"query": "Show me activation logs", "source_type": "Activation", "target_type": "ActivationInstanceLog", "style": "synonym"}
+{"query": "List event processor logs", "source_type": "Activation", "target_type": "ActivationInstanceLog", "style": "synonym"}
+{"query": "What output did the rulebook activation produce", "source_type": "Activation", "target_type": "ActivationInstanceLog", "style": "synonym"}
+{"query": "Show me the EDA activation output", "source_type": "Activation", "target_type": "ActivationInstanceLog", "style": "synonym"}
+{"query": "Show me registered applications", "source_type": "Platform", "target_type": "Application", "style": "synonym"}
+{"query": "List gateway apps", "source_type": "Platform", "target_type": "Application", "style": "synonym"}
+{"query": "What applications are configured", "source_type": "Platform", "target_type": "Application", "style": "synonym"}
+{"query": "Show me audit actions", "source_type": "AuditRule", "target_type": "AuditAction", "style": "synonym"}
+{"query": "List rule actions that fired", "source_type": "AuditRule", "target_type": "AuditAction", "style": "synonym"}
+{"query": "What did this audit rule trigger", "source_type": "AuditRule", "target_type": "AuditAction", "style": "synonym"}
+{"query": "Show me login providers", "source_type": "Platform", "target_type": "Authenticator", "style": "synonym"}
+{"query": "List SSO connectors", "source_type": "Platform", "target_type": "Authenticator", "style": "synonym"}
+{"query": "What authentication providers are configured", "source_type": "Platform", "target_type": "Authenticator", "style": "synonym"}
+{"query": "Show me auth providers", "source_type": "Platform", "target_type": "Authenticator", "style": "synonym"}
+{"query": "List identity providers", "source_type": "Platform", "target_type": "Authenticator", "style": "synonym"}
+{"query": "Show me smart inventories", "source_type": "Platform", "target_type": "ConstructedInventory", "style": "synonym"}
+{"query": "List constructed inventories", "source_type": "Platform", "target_type": "ConstructedInventory", "style": "synonym"}
+{"query": "What dynamic inventories are configured", "source_type": "Platform", "target_type": "ConstructedInventory", "style": "synonym"}
+{"query": "Copy this credential", "source_type": "Credential", "target_type": "Copy", "style": "synonym"}
+{"query": "Duplicate the credential", "source_type": "Credential", "target_type": "Copy", "style": "synonym"}
+{"query": "Make a copy of this credential", "source_type": "Credential", "target_type": "Copy", "style": "synonym"}
+{"query": "Show me credential input sources", "source_type": "Credential", "target_type": "CredentialInputSource", "style": "synonym"}
+{"query": "What external lookups feed into this credential", "source_type": "Credential", "target_type": "CredentialInputSource", "style": "synonym"}
+{"query": "List dynamic credential sources", "source_type": "Credential", "target_type": "CredentialInputSource", "style": "synonym"}
+{"query": "Show me rule engines", "source_type": "Platform", "target_type": "DecisionEnvironment", "style": "synonym"}
+{"query": "List decision runtimes", "source_type": "Platform", "target_type": "DecisionEnvironment", "style": "synonym"}
+{"query": "What decision environments are available", "source_type": "Platform", "target_type": "DecisionEnvironment", "style": "synonym"}
+{"query": "Show me EDA credentials", "source_type": "Platform", "target_type": "EdaCredential", "style": "synonym"}
+{"query": "List event-driven automation credentials", "source_type": "Platform", "target_type": "EdaCredential", "style": "synonym"}
+{"query": "What credentials are configured for EDA", "source_type": "Platform", "target_type": "EdaCredential", "style": "synonym"}
+{"query": "Show me event feeds", "source_type": "Platform", "target_type": "EventStream", "style": "synonym"}
+{"query": "List event sources", "source_type": "Platform", "target_type": "EventStream", "style": "synonym"}
+{"query": "What event streams are configured", "source_type": "Platform", "target_type": "EventStream", "style": "synonym"}
+{"query": "Show me event channels", "source_type": "Platform", "target_type": "EventStream", "style": "synonym"}
+{"query": "Show me inventory groups", "source_type": "Inventory", "target_type": "Group", "style": "synonym"}
+{"query": "List host groups in this inventory", "source_type": "Inventory", "target_type": "Group", "style": "synonym"}
+{"query": "What groups are defined in this inventory", "source_type": "Inventory", "target_type": "Group", "style": "synonym"}
+{"query": "Show me server groups", "source_type": "Inventory", "target_type": "Group", "style": "synonym"}
+{"query": "Show me automation nodes", "source_type": "Platform", "target_type": "Instance", "style": "synonym"}
+{"query": "List cluster nodes", "source_type": "Platform", "target_type": "Instance", "style": "synonym"}
+{"query": "What tower nodes are running", "source_type": "Platform", "target_type": "Instance", "style": "synonym"}
+{"query": "Show me controller instances", "source_type": "Platform", "target_type": "Instance", "style": "synonym"}
+{"query": "Show me inventory sync sources", "source_type": "Inventory", "target_type": "InventorySource", "style": "synonym"}
+{"query": "List cloud sources for this inventory", "source_type": "Inventory", "target_type": "InventorySource", "style": "synonym"}
+{"query": "What external sources feed this inventory", "source_type": "Inventory", "target_type": "InventorySource", "style": "synonym"}
+{"query": "Show me per-host job results", "source_type": "Job", "target_type": "JobHostSummary", "style": "synonym"}
+{"query": "List host summaries for this job", "source_type": "Job", "target_type": "JobHostSummary", "style": "synonym"}
+{"query": "What happened on each host during this job", "source_type": "Job", "target_type": "JobHostSummary", "style": "synonym"}
+{"query": "Show me host-level results", "source_type": "Job", "target_type": "JobHostSummary", "style": "synonym"}
+{"query": "Show me tags", "source_type": "Platform", "target_type": "Label", "style": "synonym"}
+{"query": "List labels", "source_type": "Platform", "target_type": "Label", "style": "synonym"}
+{"query": "What tags are defined", "source_type": "Platform", "target_type": "Label", "style": "synonym"}
+{"query": "Show me project sync status", "source_type": "Project", "target_type": "ProjectUpdate", "style": "synonym"}
+{"query": "List recent project syncs", "source_type": "Project", "target_type": "ProjectUpdate", "style": "synonym"}
+{"query": "What is the last SCM update for this project", "source_type": "Project", "target_type": "ProjectUpdate", "style": "synonym"}
+{"query": "Show me credential permissions", "source_type": "Credential", "target_type": "Role", "style": "synonym"}
+{"query": "List roles on this credential", "source_type": "Credential", "target_type": "Role", "style": "synonym"}
+{"query": "Who has access to this credential", "source_type": "Credential", "target_type": "Role", "style": "synonym"}
+{"query": "Show me permission definitions", "source_type": "Platform", "target_type": "RoleDefinition", "style": "synonym"}
+{"query": "List custom roles", "source_type": "Platform", "target_type": "RoleDefinition", "style": "synonym"}
+{"query": "What RBAC roles are defined", "source_type": "Platform", "target_type": "RoleDefinition", "style": "synonym"}
+{"query": "Show me EDA rulebooks", "source_type": "Platform", "target_type": "Rulebook", "style": "synonym"}
+{"query": "List event-driven rulebooks", "source_type": "Platform", "target_type": "Rulebook", "style": "synonym"}
+{"query": "What rulebooks are available", "source_type": "Platform", "target_type": "Rulebook", "style": "synonym"}
+{"query": "Show me mesh nodes", "source_type": "Platform", "target_type": "ServiceNode", "style": "synonym"}
+{"query": "List gateway service nodes", "source_type": "Platform", "target_type": "ServiceNode", "style": "synonym"}
+{"query": "What service nodes are in the mesh", "source_type": "Platform", "target_type": "ServiceNode", "style": "synonym"}
+{"query": "Show me API tokens", "source_type": "Platform", "target_type": "Token", "style": "synonym"}
+{"query": "List access tokens", "source_type": "Platform", "target_type": "Token", "style": "synonym"}
+{"query": "What API keys are active", "source_type": "Platform", "target_type": "Token", "style": "synonym"}
+{"query": "Show me personal tokens", "source_type": "Platform", "target_type": "Token", "style": "synonym"}
+{"query": "Show me the user's API keys", "source_type": "User", "target_type": "Token", "style": "synonym"}
+{"query": "List tokens for this user", "source_type": "User", "target_type": "Token", "style": "synonym"}
+{"query": "What access tokens does this user have", "source_type": "User", "target_type": "Token", "style": "synonym"}
+{"query": "Show me automation runs", "source_type": "Platform", "target_type": "UnifiedJob", "style": "synonym"}
+{"query": "List recent job runs", "source_type": "Platform", "target_type": "UnifiedJob", "style": "synonym"}
+{"query": "What automation tasks have run", "source_type": "Platform", "target_type": "UnifiedJob", "style": "synonym"}
+{"query": "Show me all completed and running tasks", "source_type": "Platform", "target_type": "UnifiedJob", "style": "synonym"}
+{"query": "Show me pending approvals", "source_type": "Platform", "target_type": "WorkflowApproval", "style": "synonym"}
+{"query": "List approval requests", "source_type": "Platform", "target_type": "WorkflowApproval", "style": "synonym"}
+{"query": "What workflows are waiting for approval", "source_type": "Platform", "target_type": "WorkflowApproval", "style": "synonym"}
+{"query": "Show me workflow runs", "source_type": "Platform", "target_type": "WorkflowJob", "style": "synonym"}
+{"query": "List workflow job executions", "source_type": "Platform", "target_type": "WorkflowJob", "style": "synonym"}
+{"query": "What workflow jobs have run", "source_type": "Platform", "target_type": "WorkflowJob", "style": "synonym"}
+{"query": "Show me workflow steps", "source_type": "WorkflowJob", "target_type": "WorkflowJobNode", "style": "synonym"}
+{"query": "List nodes in this workflow run", "source_type": "WorkflowJob", "target_type": "WorkflowJobNode", "style": "synonym"}
+{"query": "What steps did this workflow execute", "source_type": "WorkflowJob", "target_type": "WorkflowJobNode", "style": "synonym"}
+{"query": "Show me workflow template nodes", "source_type": "WorkflowJobTemplate", "target_type": "WorkflowJobTemplateNode", "style": "synonym"}
+{"query": "List steps in this pipeline", "source_type": "WorkflowJobTemplate", "target_type": "WorkflowJobTemplateNode", "style": "synonym"}
+{"query": "What nodes are in this workflow template", "source_type": "WorkflowJobTemplate", "target_type": "WorkflowJobTemplateNode", "style": "synonym"}
+{"query": "What deployments happened recently", "source_type": "Platform", "target_type": "Job", "style": "ambiguous"}
+{"query": "Show me what ran today", "source_type": "Platform", "target_type": "UnifiedJob", "style": "ambiguous"}
+{"query": "What is this host running", "source_type": "Host", "target_type": "AnsibleFacts", "style": "ambiguous"}
+{"query": "Is the project up to date", "source_type": "Project", "target_type": "ProjectUpdate", "style": "ambiguous"}
+{"query": "Who has access to the system", "source_type": "Platform", "target_type": "User", "style": "ambiguous"}
+{"query": "Are all nodes healthy", "source_type": "Platform", "target_type": "Instance", "style": "ambiguous"}
+{"query": "What failed recently", "source_type": "Platform", "target_type": "UnifiedJob", "style": "ambiguous"}
+{"query": "Show me external auth connections", "source_type": "Platform", "target_type": "Authenticator", "style": "ambiguous"}
+{"query": "What is in this inventory", "source_type": "Inventory", "target_type": "Group", "style": "ambiguous"}
+{"query": "How far along is the workflow", "source_type": "WorkflowJob", "target_type": "WorkflowJobNode", "style": "ambiguous"}
+{"query": "What can this user do", "source_type": "User", "target_type": "Organization", "style": "ambiguous"}
+{"query": "Who is on this team", "source_type": "Team", "target_type": "User", "style": "ambiguous"}
+{"query": "What templates does this org own", "source_type": "Organization", "target_type": "JobTemplate", "style": "ambiguous"}
+{"query": "What events did this job produce", "source_type": "Job", "target_type": "JobEvent", "style": "ambiguous"}
+{"query": "Who can use this credential", "source_type": "Credential", "target_type": "Role", "style": "ambiguous"}
+{"query": "Show me what happened on each host", "source_type": "Job", "target_type": "JobHostSummary", "style": "ambiguous"}
+{"query": "What changed in the platform", "source_type": "Platform", "target_type": "ActivityStream", "style": "ambiguous"}
+{"query": "Show me the org's infrastructure inventory", "source_type": "Organization", "target_type": "Inventory", "style": "ambiguous"}
+{"query": "What runtimes are available for jobs", "source_type": "Platform", "target_type": "ExecutionEnvironment", "style": "ambiguous"}
+{"query": "What event processors are running", "source_type": "Platform", "target_type": "Activation", "style": "ambiguous"}
+{"query": "The backup job failed last night, need to see the output", "source_type": "Job", "target_type": "UnifiedJobStdout", "style": "noisy"}
+{"query": "Something is wrong with this host, check the facts", "source_type": "Host", "target_type": "AnsibleFacts", "style": "noisy"}
+{"query": "We need to cancel that job immediately, it is breaking things", "source_type": "Job", "target_type": "JobCancel", "style": "noisy"}
+{"query": "The credentials seem wrong, the playbook keeps failing", "source_type": "Platform", "target_type": "Credential", "style": "noisy"}
+{"query": "Someone asked about the team membership for the audit", "source_type": "Organization", "target_type": "Team", "style": "noisy"}
+{"query": "The cluster seems slow, check the node status", "source_type": "Platform", "target_type": "Instance", "style": "noisy"}
+{"query": "Which organization is this user supposed to be in, there is confusion", "source_type": "Platform", "target_type": "Organization", "style": "noisy"}
+{"query": "The inventory source stopped syncing, need to check it", "source_type": "Inventory", "target_type": "InventorySource", "style": "noisy"}
+{"query": "A workflow approval has been stuck for days, list them", "source_type": "Platform", "target_type": "WorkflowApproval", "style": "noisy"}
+{"query": "LDAP authentication broke after the update, show the providers", "source_type": "Platform", "target_type": "Authenticator", "style": "noisy"}
+{"query": "Someone's token expired and they cannot login, check their tokens", "source_type": "User", "target_type": "Token", "style": "noisy"}
+{"query": "The EDA activation is not processing events, something is broken", "source_type": "Platform", "target_type": "Activation", "style": "noisy"}
+{"query": "Need to check per-host results, some hosts may have failed", "source_type": "Job", "target_type": "JobHostSummary", "style": "noisy"}
+{"query": "The execution environment is missing a package, list them all", "source_type": "Platform", "target_type": "ExecutionEnvironment", "style": "noisy"}
+{"query": "User says they are on the wrong team, need to verify membership", "source_type": "Team", "target_type": "User", "style": "noisy"}
+{"query": "The event stream logs look suspicious, need to review them", "source_type": "EventStream", "target_type": "ActivationInstanceLog", "style": "noisy"}
+{"query": "Workflow template nodes seem misconfigured, show them", "source_type": "WorkflowJobTemplate", "target_type": "WorkflowJobTemplateNode", "style": "noisy"}
+{"query": "The project has not synced in a while, check the update status", "source_type": "Project", "target_type": "ProjectUpdate", "style": "noisy"}
+{"query": "A credential copy might have the wrong permissions, verify it", "source_type": "Credential", "target_type": "Copy", "style": "noisy"}
+{"query": "The inventory groups look off after the migration, list them", "source_type": "Inventory", "target_type": "Group", "style": "noisy"}
+{"query": "Who has access to the system", "source_type": "Platform", "target_type": "User", "style": "ambiguous"}
+{"query": "Show me all user accounts", "source_type": "Platform", "target_type": "User", "style": "ambiguous"}
+{"query": "Who is registered on the platform", "source_type": "Platform", "target_type": "User", "style": "ambiguous"}
+{"query": "List everyone who can log in", "source_type": "Platform", "target_type": "User", "style": "ambiguous"}
+{"query": "What ran recently", "source_type": "Platform", "target_type": "Job", "style": "ambiguous"}
+{"query": "Show me recent automation runs", "source_type": "Platform", "target_type": "Job", "style": "ambiguous"}
+{"query": "What jobs finished today", "source_type": "Platform", "target_type": "Job", "style": "ambiguous"}
+{"query": "Any automation that just completed", "source_type": "Platform", "target_type": "Job", "style": "ambiguous"}
+{"query": "What's been running on the platform", "source_type": "Platform", "target_type": "UnifiedJob", "style": "ambiguous"}
+{"query": "Show me everything that executed recently", "source_type": "Platform", "target_type": "UnifiedJob", "style": "ambiguous"}
+{"query": "What automation ran today", "source_type": "Platform", "target_type": "UnifiedJob", "style": "ambiguous"}
+{"query": "Is anything currently executing", "source_type": "Platform", "target_type": "UnifiedJob", "style": "ambiguous"}
+{"query": "Show me our tenants", "source_type": "Platform", "target_type": "Organization", "style": "ambiguous"}
+{"query": "What organizational units are set up", "source_type": "Platform", "target_type": "Organization", "style": "ambiguous"}
+{"query": "How is the platform organized", "source_type": "Platform", "target_type": "Organization", "style": "ambiguous"}
+{"query": "What secrets are stored", "source_type": "Platform", "target_type": "Credential", "style": "ambiguous"}
+{"query": "Show me what authentication is configured", "source_type": "Platform", "target_type": "Credential", "style": "ambiguous"}
+{"query": "What credentials do we have saved", "source_type": "Platform", "target_type": "Credential", "style": "ambiguous"}
+{"query": "How do users log in", "source_type": "Platform", "target_type": "Authenticator", "style": "ambiguous"}
+{"query": "Show me authentication methods", "source_type": "Platform", "target_type": "Authenticator", "style": "ambiguous"}
+{"query": "What identity providers are connected", "source_type": "Platform", "target_type": "Authenticator", "style": "ambiguous"}
+{"query": "Show me the cluster status", "source_type": "Platform", "target_type": "Instance", "style": "ambiguous"}
+{"query": "What nodes are in the cluster", "source_type": "Platform", "target_type": "Instance", "style": "ambiguous"}
+{"query": "How is our automation infrastructure doing", "source_type": "Platform", "target_type": "Instance", "style": "ambiguous"}
+{"query": "Where do jobs run", "source_type": "Platform", "target_type": "InstanceGroup", "style": "ambiguous"}
+{"query": "Show me execution capacity", "source_type": "Platform", "target_type": "InstanceGroup", "style": "ambiguous"}
+{"query": "What worker pools do we have", "source_type": "Platform", "target_type": "InstanceGroup", "style": "ambiguous"}
+{"query": "What's on this machine", "source_type": "Host", "target_type": "AnsibleFacts", "style": "ambiguous"}
+{"query": "Tell me about this host", "source_type": "Host", "target_type": "AnsibleFacts", "style": "ambiguous"}
+{"query": "What's this server running", "source_type": "Host", "target_type": "AnsibleFacts", "style": "ambiguous"}
+{"query": "Show me details about this host", "source_type": "Host", "target_type": "AnsibleFacts", "style": "ambiguous"}
+{"query": "Is this project synced", "source_type": "Project", "target_type": "ProjectUpdate", "style": "ambiguous"}
+{"query": "When was this project last updated", "source_type": "Project", "target_type": "ProjectUpdate", "style": "ambiguous"}
+{"query": "What's the sync status for this project", "source_type": "Project", "target_type": "ProjectUpdate", "style": "ambiguous"}
+{"query": "Who is on this team", "source_type": "Team", "target_type": "User", "style": "ambiguous"}
+{"query": "Show me team members", "source_type": "Team", "target_type": "User", "style": "ambiguous"}
+{"query": "List the people in this team", "source_type": "Team", "target_type": "User", "style": "ambiguous"}
+{"query": "What's in this inventory", "source_type": "Inventory", "target_type": "Group", "style": "ambiguous"}
+{"query": "Show me how this inventory is organized", "source_type": "Inventory", "target_type": "Group", "style": "ambiguous"}
+{"query": "What groups are defined in this inventory", "source_type": "Inventory", "target_type": "Group", "style": "ambiguous"}
+{"query": "How is this inventory structured", "source_type": "Inventory", "target_type": "Group", "style": "ambiguous"}
+{"query": "What templates does this org have", "source_type": "Organization", "target_type": "JobTemplate", "style": "ambiguous"}
+{"query": "Show me what this organization can run", "source_type": "Organization", "target_type": "JobTemplate", "style": "ambiguous"}
+{"query": "What automation is available for this org", "source_type": "Organization", "target_type": "JobTemplate", "style": "ambiguous"}
+{"query": "What happened during this job", "source_type": "Job", "target_type": "JobEvent", "style": "ambiguous"}
+{"query": "Show me the execution log for this job", "source_type": "Job", "target_type": "JobEvent", "style": "ambiguous"}
+{"query": "What events occurred in this run", "source_type": "Job", "target_type": "JobEvent", "style": "ambiguous"}
+{"query": "Who can use this credential", "source_type": "Credential", "target_type": "Role", "style": "ambiguous"}
+{"query": "What access does this credential have", "source_type": "Credential", "target_type": "Role", "style": "ambiguous"}
+{"query": "Show me permissions for this credential", "source_type": "Credential", "target_type": "Role", "style": "ambiguous"}
+{"query": "What orgs does this user belong to", "source_type": "User", "target_type": "Organization", "style": "ambiguous"}
+{"query": "Where does this user work", "source_type": "User", "target_type": "Organization", "style": "ambiguous"}
+{"query": "Show me this user's organizational memberships", "source_type": "User", "target_type": "Organization", "style": "ambiguous"}
+{"query": "Show me the workflow steps", "source_type": "WorkflowJob", "target_type": "WorkflowJobNode", "style": "ambiguous"}
+{"query": "What nodes executed in this workflow", "source_type": "WorkflowJob", "target_type": "WorkflowJobNode", "style": "ambiguous"}
+{"query": "How far along is this workflow", "source_type": "WorkflowJob", "target_type": "WorkflowJobNode", "style": "ambiguous"}
+{"query": "Any pending approvals", "source_type": "Platform", "target_type": "WorkflowApproval", "style": "ambiguous"}
+{"query": "What's waiting for approval", "source_type": "Platform", "target_type": "WorkflowApproval", "style": "ambiguous"}
+{"query": "What event sources are set up", "source_type": "Platform", "target_type": "EventStream", "style": "ambiguous"}
+{"query": "Where are events coming from", "source_type": "Platform", "target_type": "EventStream", "style": "ambiguous"}
+{"query": "What rule engines do we have", "source_type": "Platform", "target_type": "DecisionEnvironment", "style": "ambiguous"}
+{"query": "Where do rules execute", "source_type": "Platform", "target_type": "DecisionEnvironment", "style": "ambiguous"}
+{"query": "What's been happening on the platform", "source_type": "Platform", "target_type": "ActivityStream", "style": "ambiguous"}
+{"query": "Show me an audit trail", "source_type": "Platform", "target_type": "ActivityStream", "style": "ambiguous"}
+{"query": "Show me API tokens", "source_type": "Platform", "target_type": "Token", "style": "ambiguous"}
+{"query": "What tokens are active", "source_type": "Platform", "target_type": "Token", "style": "ambiguous"}
+{"query": "What runtimes are available", "source_type": "Platform", "target_type": "ExecutionEnvironment", "style": "ambiguous"}
+{"query": "Where can automation jobs run", "source_type": "Platform", "target_type": "ExecutionEnvironment", "style": "ambiguous"}
+{"query": "What event-driven automation is active", "source_type": "Platform", "target_type": "Activation", "style": "ambiguous"}
+{"query": "Show me rulebook processing", "source_type": "Platform", "target_type": "Activation", "style": "ambiguous"}
+{"query": "Show all organizations on the platform", "source_type": "Platform", "target_type": "Organization", "style": "template"}
+{"query": "List every organization configured in the system", "source_type": "Platform", "target_type": "Organization", "style": "template"}
+{"query": "What organizations exist on the controller", "source_type": "Platform", "target_type": "Organization", "style": "template"}
+{"query": "Pull up all organizations across the platform", "source_type": "Platform", "target_type": "Organization", "style": "template"}
+{"query": "Display all registered organizations", "source_type": "Platform", "target_type": "Organization", "style": "template"}
+{"query": "Show me all tenants we manage", "source_type": "Platform", "target_type": "Organization", "style": "synonym"}
+{"query": "List all org units across the system", "source_type": "Platform", "target_type": "Organization", "style": "synonym"}
+{"query": "What business units are registered on the controller", "source_type": "Platform", "target_type": "Organization", "style": "synonym"}
+{"query": "Show all authenticators on the platform", "source_type": "Platform", "target_type": "Authenticator", "style": "template"}
+{"query": "List every authenticator configured", "source_type": "Platform", "target_type": "Authenticator", "style": "template"}
+{"query": "What authenticators are set up on the controller", "source_type": "Platform", "target_type": "Authenticator", "style": "template"}
+{"query": "Pull up all authentication providers", "source_type": "Platform", "target_type": "Authenticator", "style": "template"}
+{"query": "Display all configured authenticators", "source_type": "Platform", "target_type": "Authenticator", "style": "template"}
+{"query": "Show me all LDAP and SAML configurations", "source_type": "Platform", "target_type": "Authenticator", "style": "synonym"}
+{"query": "List all external authentication sources", "source_type": "Platform", "target_type": "Authenticator", "style": "synonym"}
+{"query": "What SSO integrations are configured on the platform", "source_type": "Platform", "target_type": "Authenticator", "style": "synonym"}
+{"query": "Show all workflow jobs on the platform", "source_type": "Platform", "target_type": "WorkflowJob", "style": "template"}
+{"query": "List every workflow job that has run", "source_type": "Platform", "target_type": "WorkflowJob", "style": "template"}
+{"query": "What workflow executions do we have", "source_type": "Platform", "target_type": "WorkflowJob", "style": "template"}
+{"query": "Pull up all workflow job runs", "source_type": "Platform", "target_type": "WorkflowJob", "style": "template"}
+{"query": "Display all workflow jobs across the platform", "source_type": "Platform", "target_type": "WorkflowJob", "style": "template"}
+{"query": "Show me all pipeline executions", "source_type": "Platform", "target_type": "WorkflowJob", "style": "synonym"}
+{"query": "List all workflow runs on the system", "source_type": "Platform", "target_type": "WorkflowJob", "style": "synonym"}
+{"query": "Show all instances on the platform", "source_type": "Platform", "target_type": "Instance", "style": "template"}
+{"query": "List every controller instance", "source_type": "Platform", "target_type": "Instance", "style": "template"}
+{"query": "What instances are registered in the cluster", "source_type": "Platform", "target_type": "Instance", "style": "template"}
+{"query": "Pull up all automation controller instances", "source_type": "Platform", "target_type": "Instance", "style": "template"}
+{"query": "Display all instances on the controller", "source_type": "Platform", "target_type": "Instance", "style": "template"}
+{"query": "Show me all cluster nodes", "source_type": "Platform", "target_type": "Instance", "style": "synonym"}
+{"query": "List all tower nodes in the system", "source_type": "Platform", "target_type": "Instance", "style": "synonym"}
+{"query": "What automation nodes are online", "source_type": "Platform", "target_type": "Instance", "style": "synonym"}
+{"query": "Show all instance groups on the platform", "source_type": "Platform", "target_type": "InstanceGroup", "style": "template"}
+{"query": "List every instance group configured", "source_type": "Platform", "target_type": "InstanceGroup", "style": "template"}
+{"query": "What instance groups are set up", "source_type": "Platform", "target_type": "InstanceGroup", "style": "template"}
+{"query": "Pull up all instance groups on the controller", "source_type": "Platform", "target_type": "InstanceGroup", "style": "template"}
+{"query": "Display all execution groups on the platform", "source_type": "Platform", "target_type": "InstanceGroup", "style": "template"}
+{"query": "Show me all worker pools", "source_type": "Platform", "target_type": "InstanceGroup", "style": "synonym"}
+{"query": "List all container groups and instance groups", "source_type": "Platform", "target_type": "InstanceGroup", "style": "synonym"}
+{"query": "What job runner groups do we have configured", "source_type": "Platform", "target_type": "InstanceGroup", "style": "synonym"}
+{"query": "Show all event streams on the platform", "source_type": "Platform", "target_type": "EventStream", "style": "template"}
+{"query": "List every event stream configured", "source_type": "Platform", "target_type": "EventStream", "style": "template"}
+{"query": "What event streams do we have", "source_type": "Platform", "target_type": "EventStream", "style": "template"}
+{"query": "Pull up all event stream connections", "source_type": "Platform", "target_type": "EventStream", "style": "template"}
+{"query": "Display all configured event streams", "source_type": "Platform", "target_type": "EventStream", "style": "template"}
+{"query": "Show me all event feed sources", "source_type": "Platform", "target_type": "EventStream", "style": "synonym"}
+{"query": "List all event ingestion endpoints", "source_type": "Platform", "target_type": "EventStream", "style": "synonym"}
+{"query": "Show all decision environments on the platform", "source_type": "Platform", "target_type": "DecisionEnvironment", "style": "template"}
+{"query": "List every decision environment configured", "source_type": "Platform", "target_type": "DecisionEnvironment", "style": "template"}
+{"query": "What decision environments are available", "source_type": "Platform", "target_type": "DecisionEnvironment", "style": "template"}
+{"query": "Pull up all decision runtime environments", "source_type": "Platform", "target_type": "DecisionEnvironment", "style": "template"}
+{"query": "Display all decision environments on the controller", "source_type": "Platform", "target_type": "DecisionEnvironment", "style": "template"}
+{"query": "Show me all rule execution environments", "source_type": "Platform", "target_type": "DecisionEnvironment", "style": "synonym"}
+{"query": "List all rule engine runtimes", "source_type": "Platform", "target_type": "DecisionEnvironment", "style": "synonym"}
+{"query": "Show all applications on the platform", "source_type": "Platform", "target_type": "Application", "style": "template"}
+{"query": "List every application registered", "source_type": "Platform", "target_type": "Application", "style": "template"}
+{"query": "What applications do we have configured", "source_type": "Platform", "target_type": "Application", "style": "template"}
+{"query": "Pull up all applications on the controller", "source_type": "Platform", "target_type": "Application", "style": "template"}
+{"query": "Display all registered OAuth applications", "source_type": "Platform", "target_type": "Application", "style": "template"}
+{"query": "Show me all API client applications", "source_type": "Platform", "target_type": "Application", "style": "synonym"}
+{"query": "List all external application integrations", "source_type": "Platform", "target_type": "Application", "style": "synonym"}
+{"query": "We had a security incident, need to check all credentials immediately", "source_type": "Platform", "target_type": "Credential", "style": "noisy"}
+{"query": "Someone thinks a vault password leaked, show me all credentials", "source_type": "Platform", "target_type": "Credential", "style": "noisy"}
+{"query": "The audit team wants to review all stored credentials for compliance", "source_type": "Platform", "target_type": "Credential", "style": "noisy"}
+{"query": "The cluster seems slow and jobs are queuing up, show me all instances", "source_type": "Platform", "target_type": "Instance", "style": "noisy"}
+{"query": "We lost a node yesterday during maintenance, can you list all instances", "source_type": "Platform", "target_type": "Instance", "style": "noisy"}
+{"query": "Capacity planning meeting tomorrow, need to see all instances and their status", "source_type": "Platform", "target_type": "Instance", "style": "noisy"}
+{"query": "We're restructuring the org hierarchy, list all organizations", "source_type": "Platform", "target_type": "Organization", "style": "noisy"}
+{"query": "The compliance team needs to audit all organizations and their access", "source_type": "Platform", "target_type": "Organization", "style": "noisy"}
+{"query": "Someone created duplicate organizations, show me all of them", "source_type": "Platform", "target_type": "Organization", "style": "noisy"}
+{"query": "The inventory sync has been failing since the migration, show me inventory sources", "source_type": "Inventory", "target_type": "InventorySource", "style": "noisy"}
+{"query": "We changed our cloud provider credentials and now syncs are broken, check inventory sources", "source_type": "Inventory", "target_type": "InventorySource", "style": "noisy"}
+{"query": "Need to verify all inventory source configurations after the update", "source_type": "Inventory", "target_type": "InventorySource", "style": "noisy"}
+{"query": "A user says their API token expired and they can't run automation, show me their tokens", "source_type": "User", "target_type": "Token", "style": "noisy"}
+{"query": "Security wants to rotate all tokens for this user after the breach", "source_type": "User", "target_type": "Token", "style": "noisy"}
+{"query": "Someone reported unauthorized API calls from this user, check their tokens", "source_type": "User", "target_type": "Token", "style": "noisy"}
+{"query": "Jobs are failing because of missing Python packages, list all execution environments", "source_type": "Platform", "target_type": "ExecutionEnvironment", "style": "noisy"}
+{"query": "We need to update the container base image, show me all execution environments", "source_type": "Platform", "target_type": "ExecutionEnvironment", "style": "noisy"}
+{"query": "LDAP authentication broke after the controller upgrade, show me all authenticators", "source_type": "Platform", "target_type": "Authenticator", "style": "noisy"}
+{"query": "We're migrating from LDAP to SAML and need to see all authenticator configs", "source_type": "Platform", "target_type": "Authenticator", "style": "noisy"}
+{"query": "Users can't log in this morning, need to check all authenticator configurations", "source_type": "Platform", "target_type": "Authenticator", "style": "noisy"}
+{"query": "There's a runaway automation, I need to cancel this job", "source_type": "Job", "target_type": "JobCancel", "style": "noisy"}
+{"query": "This job has been running for hours and seems stuck, need to stop it", "source_type": "Job", "target_type": "JobCancel", "style": "noisy"}
+{"query": "Someone was moved to the wrong team, show me all team members", "source_type": "Team", "target_type": "User", "style": "noisy"}
+{"query": "We need to audit who is on this team before the access review", "source_type": "Team", "target_type": "User", "style": "noisy"}
+{"query": "This org needs access to specific templates, show me what they currently have", "source_type": "Organization", "target_type": "JobTemplate", "style": "noisy"}
+{"query": "We're auditing what each organization can run in production", "source_type": "Organization", "target_type": "JobTemplate", "style": "noisy"}
+{"query": "Workflows are stuck waiting for someone to approve them, show me all pending approvals", "source_type": "Platform", "target_type": "WorkflowApproval", "style": "noisy"}
+{"query": "Someone forgot to approve a critical workflow, list all workflow approvals", "source_type": "Platform", "target_type": "WorkflowApproval", "style": "noisy"}
+{"query": "The event-driven automation stopped processing events, show me all activations", "source_type": "Platform", "target_type": "Activation", "style": "noisy"}
+{"query": "We need to restart some rulebook activations after the outage", "source_type": "Platform", "target_type": "Activation", "style": "noisy"}
+{"query": "That config deployment job blew up at 3am. Grab me the stdout so I can see the traceback before standup.", "source_type": "Job", "target_type": "UnifiedJobStdout", "style": "noisy"}
+{"query": "Can someone check why the provisioning job is showing failed? I need the full output.", "source_type": "Job", "target_type": "UnifiedJobStdout", "style": "noisy"}
+{"query": "The job that was supposed to rotate the certs just finished but I'm not sure it worked. Pull the logs.", "source_type": "Job", "target_type": "UnifiedJobStdout", "style": "noisy"}
+{"query": "I kicked off the firmware update and it looked like it hung. Need to see what it actually printed.", "source_type": "Job", "target_type": "UnifiedJobStdout", "style": "noisy"}
+{"query": "Check the host details for that web server, it's been acting up since the last patch window.", "source_type": "Host", "target_type": "AnsibleFacts", "style": "noisy"}
+{"query": "One of the DB servers has a weird kernel version showing up. Pull the facts so I can compare.", "source_type": "Host", "target_type": "AnsibleFacts", "style": "noisy"}
+{"query": "The app team says this host isn't responding to playbooks. What does Ansible think the host looks like?", "source_type": "Host", "target_type": "AnsibleFacts", "style": "noisy"}
+{"query": "We're troubleshooting a memory issue on node-5. Grab the system info Ansible has cached.", "source_type": "Host", "target_type": "AnsibleFacts", "style": "noisy"}
+{"query": "That playbook is eating 100% CPU on every host it touches. Kill the job before it gets to production.", "source_type": "Job", "target_type": "JobCancel", "style": "noisy"}
+{"query": "Abort the deployment, QA just found a blocker. The rolling update job needs to stop right now.", "source_type": "Job", "target_type": "JobCancel", "style": "noisy"}
+{"query": "Wrong inventory got picked up and it's running against staging. Stop that job!", "source_type": "Job", "target_type": "JobCancel", "style": "noisy"}
+{"query": "Hey can you pull up the credentials? We had a rotation last week and I want to make sure the new SSH key is there.", "source_type": "Platform", "target_type": "Credential", "style": "noisy"}
+{"query": "A template keeps failing with auth errors. I bet the vault password changed. Let me see the credentials to verify.", "source_type": "Platform", "target_type": "Credential", "style": "noisy"}
+{"query": "We're onboarding a new cloud account and I need to see what credentials already exist so I don't make duplicates.", "source_type": "Platform", "target_type": "Credential", "style": "noisy"}
+{"query": "We're doing a reorg and I need to verify the team structure in the engineering org before moving people.", "source_type": "Organization", "target_type": "Team", "style": "noisy"}
+{"query": "New manager wants to understand who reports where. Show the teams under the operations organization.", "source_type": "Organization", "target_type": "Team", "style": "noisy"}
+{"query": "Can't figure out why some people can see templates and others can't. It might be a team permissions thing in this org.", "source_type": "Organization", "target_type": "Team", "style": "noisy"}
+{"query": "Jobs are queuing for 20 minutes before they start running. Something is off with the capacity. Show me the tower nodes.", "source_type": "Platform", "target_type": "Instance", "style": "noisy"}
+{"query": "We just added a new execution node and I want to confirm it registered properly. List the instances.", "source_type": "Platform", "target_type": "Instance", "style": "noisy"}
+{"query": "One of the cluster nodes went offline during maintenance and I need to see if it came back.", "source_type": "Platform", "target_type": "Instance", "style": "noisy"}
+{"query": "Somebody set up a new org without telling anyone and now there are templates scattered everywhere. Show me all orgs.", "source_type": "Platform", "target_type": "Organization", "style": "noisy"}
+{"query": "I think there are orphaned organizations from when we split the business unit. Let me see the full list.", "source_type": "Platform", "target_type": "Organization", "style": "noisy"}
+{"query": "User is complaining they can't see their project. Might be an org-level thing. What orgs do we have?", "source_type": "Platform", "target_type": "Organization", "style": "noisy"}
+{"query": "The AWS dynamic inventory hasn't synced in two days and the host list is stale. Check the sources.", "source_type": "Inventory", "target_type": "InventorySource", "style": "noisy"}
+{"query": "We switched cloud providers and I need to update the inventory sources. Show me what's configured.", "source_type": "Inventory", "target_type": "InventorySource", "style": "noisy"}
+{"query": "Hosts keep disappearing from the inventory. I think the sync schedule is off. Pull up the sources.", "source_type": "Inventory", "target_type": "InventorySource", "style": "noisy"}
+{"query": "There's a deployment stuck waiting for someone to click approve and the release manager is out. Show pending approvals.", "source_type": "Platform", "target_type": "WorkflowApproval", "style": "noisy"}
+{"query": "The workflow hasn't moved in 4 hours. Pretty sure it's blocked on an approval step. Can you check?", "source_type": "Platform", "target_type": "WorkflowApproval", "style": "noisy"}
+{"query": "Change management says there are approvals piling up. I need to see which ones are waiting.", "source_type": "Platform", "target_type": "WorkflowApproval", "style": "noisy"}
+{"query": "Nobody can log into the platform this morning. SSO is returning errors. Show me the auth configuration.", "source_type": "Platform", "target_type": "Authenticator", "style": "noisy"}
+{"query": "We're migrating from LDAP to SAML and I need to see what's currently set up for authentication.", "source_type": "Platform", "target_type": "Authenticator", "style": "noisy"}
+{"query": "After the upgrade, the LDAP integration stopped working. Pull the authenticator settings so I can compare.", "source_type": "Platform", "target_type": "Authenticator", "style": "noisy"}
+{"query": "The CI/CD pipeline is throwing 401s. The service account token probably expired. Check the tokens for that user.", "source_type": "User", "target_type": "Token", "style": "noisy"}
+{"query": "We had a security scan flag an old API token. I need to see what tokens this user has to find the one to revoke.", "source_type": "User", "target_type": "Token", "style": "noisy"}
+{"query": "Jenkins can't talk to AAP anymore. I bet the personal access token needs regenerating. Show me the user's tokens.", "source_type": "User", "target_type": "Token", "style": "noisy"}
+{"query": "None of the webhook-triggered automations are firing. Something broke in the EDA layer. Show me the activations.", "source_type": "Platform", "target_type": "Activation", "style": "noisy"}
+{"query": "We set up a rulebook activation last week and I'm not sure it stuck. Pull the list so I can verify.", "source_type": "Platform", "target_type": "Activation", "style": "noisy"}
+{"query": "Alerts from ServiceNow used to trigger remediation playbooks automatically. That stopped. Check the EDA activations.", "source_type": "Platform", "target_type": "Activation", "style": "noisy"}
+{"query": "The patching job ran on 150 servers and I need to find which ones had failures. Give me the host-level results.", "source_type": "Job", "target_type": "JobHostSummary", "style": "noisy"}
+{"query": "Management wants a count of how many hosts were successful vs failed in the last compliance run.", "source_type": "Job", "target_type": "JobHostSummary", "style": "noisy"}
+{"query": "Three hosts rebooted unexpectedly during the update. I need the per-host summary to see what happened on those.", "source_type": "Job", "target_type": "JobHostSummary", "style": "noisy"}
+{"query": "A job template references an EE that doesn't exist anymore. Someone must have deleted it. List what's available.", "source_type": "Platform", "target_type": "ExecutionEnvironment", "style": "noisy"}
+{"query": "We built a custom execution environment with the new Python dependencies but I don't see it in the UI. Pull the list.", "source_type": "Platform", "target_type": "ExecutionEnvironment", "style": "noisy"}
+{"query": "Jobs are failing because they can't find the right collections. I think it's an execution environment mismatch. Show me the EEs.", "source_type": "Platform", "target_type": "ExecutionEnvironment", "style": "noisy"}
+{"query": "The new hire should be on the ops team but she says she can't see any templates. Check who's actually on that team.", "source_type": "Team", "target_type": "User", "style": "noisy"}
+{"query": "We removed someone from the security team last week but they can still launch scans. Check the current members.", "source_type": "Team", "target_type": "User", "style": "noisy"}
+{"query": "Before I hand off on-call, I need to make sure everyone on the SRE team has the right access. Show the members.", "source_type": "Team", "target_type": "User", "style": "noisy"}
+{"query": "Audit the team membership in the dev org to make sure access is correct", "source_type": "Organization", "target_type": "Team", "style": "noisy"}
+{"query": "I need to see which teams exist in this organization for an access review", "source_type": "Organization", "target_type": "Team", "style": "noisy"}
+{"query": "The security team wants to know all teams under the production org for compliance", "source_type": "Organization", "target_type": "Team", "style": "noisy"}
+{"query": "Who has access to what in engineering? Start with the team structure in the org.", "source_type": "Organization", "target_type": "Team", "style": "noisy"}
+{"query": "We're doing an access audit across the organization, list all teams first", "source_type": "Organization", "target_type": "Team", "style": "noisy"}
+{"query": "Jobs are running slow, I think it's an infrastructure problem. Show me the tower instances.", "source_type": "Platform", "target_type": "Instance", "style": "noisy"}
+{"query": "Automation is backed up and jobs are queuing. Check if we have enough instances to handle the load.", "source_type": "Platform", "target_type": "Instance", "style": "noisy"}
+{"query": "Jobs keep timing out, probably a capacity issue. Pull the list of cluster nodes.", "source_type": "Platform", "target_type": "Instance", "style": "noisy"}
+{"query": "The job queue is growing and nothing is getting picked up. I want to see the instances to check if a node is down.", "source_type": "Platform", "target_type": "Instance", "style": "noisy"}
+{"query": "Everything is slow, jobs that usually take 2 minutes are taking 30. Show me the platform instances.", "source_type": "Platform", "target_type": "Instance", "style": "noisy"}
+{"query": "Templates won't launch, I think it's an organization issue. Show me all the orgs.", "source_type": "Platform", "target_type": "Organization", "style": "noisy"}
+{"query": "Permission denied on everything. Am I even in the right org? List what organizations exist.", "source_type": "Platform", "target_type": "Organization", "style": "noisy"}
+{"query": "I can't see any projects or templates. Maybe my org is wrong. What orgs are on the platform?", "source_type": "Platform", "target_type": "Organization", "style": "noisy"}
+{"query": "Users are getting access errors trying to run templates. Could be an org-level thing, show me all orgs.", "source_type": "Platform", "target_type": "Organization", "style": "noisy"}
+{"query": "Something is misconfigured at the org level. List all organizations so I can check which one I should be in.", "source_type": "Platform", "target_type": "Organization", "style": "noisy"}
+{"query": "The cloud inventory seems out of date. Check the sync sources on this inventory.", "source_type": "Inventory", "target_type": "InventorySource", "style": "noisy"}
+{"query": "Hosts are missing from the inventory. I bet the source sync failed. Show me the sources for this inventory.", "source_type": "Inventory", "target_type": "InventorySource", "style": "noisy"}
+{"query": "This inventory hasn't updated in days. Pull up its sources so I can check the schedule.", "source_type": "Inventory", "target_type": "InventorySource", "style": "noisy"}
+{"query": "AWS hosts disappeared from the inventory. Need to see what sources are configured on it.", "source_type": "Inventory", "target_type": "InventorySource", "style": "noisy"}
+{"query": "The inventory is showing stale data. Check what sources feed into this specific inventory.", "source_type": "Inventory", "target_type": "InventorySource", "style": "noisy"}
+{"query": "A job template needs a custom EE but it's not available. List all execution environments on the platform.", "source_type": "Platform", "target_type": "ExecutionEnvironment", "style": "noisy"}
+{"query": "The EE I need isn't showing up. Can you list all execution environments available on the system?", "source_type": "Platform", "target_type": "ExecutionEnvironment", "style": "noisy"}
+{"query": "We need to find which execution environments are on the platform so we know which one to assign to the template.", "source_type": "Platform", "target_type": "ExecutionEnvironment", "style": "noisy"}
+{"query": "Someone deleted an execution environment and now jobs are failing. Show me all EEs still on the platform.", "source_type": "Platform", "target_type": "ExecutionEnvironment", "style": "noisy"}
+{"query": "I can't find the right EE for my playbook. What execution environments does the platform have?", "source_type": "Platform", "target_type": "ExecutionEnvironment", "style": "noisy"}

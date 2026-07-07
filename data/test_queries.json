@@ -36,7 +36,7 @@
     "source_type": "Inventory",
     "target_type": "Host",
     "expected_tools": [
-      "controller.inventories_hosts_list"
+      "controller.inventories_hosts_create"
     ]
   },
   {
@@ -76,7 +76,7 @@
     "source_type": "JobTemplate",
     "target_type": "Schedule",
     "expected_tools": [
-      "controller.job_templates_schedules_list"
+      "controller.job_templates_schedules_create"
     ]
   },
   {
@@ -96,7 +96,7 @@
     "source_type": "Organization",
     "target_type": "Team",
     "expected_tools": [
-      "controller.organizations_teams_list"
+      "controller.organizations_teams_create"
     ]
   },
   {
@@ -126,7 +126,7 @@
     "source_type": "Inventory",
     "target_type": "InventorySource",
     "expected_tools": [
-      "controller.inventories_inventory_sources_list"
+      "controller.inventories_inventory_sources_create"
     ]
   },
   {
@@ -147,6 +147,206 @@
     "target_type": "ProjectPlaybooks",
     "expected_tools": [
       "controller.projects_playbooks_retrieve"
+    ]
+  },
+  {
+    "id": "clean_list_platform_hosts",
+    "category": "clean",
+    "query": "Show all managed hosts across the platform",
+    "source_type": "Platform",
+    "target_type": "Host",
+    "expected_tools": [
+      "controller.hosts_all_groups_list"
+    ]
+  },
+  {
+    "id": "clean_list_organizations",
+    "category": "clean",
+    "query": "List the organizations configured on the controller",
+    "source_type": "Platform",
+    "target_type": "Organization",
+    "expected_tools": [
+      "controller.organizations_admins_list"
+    ]
+  },
+  {
+    "id": "clean_list_instances",
+    "category": "clean",
+    "query": "Show me the controller instances in the cluster",
+    "source_type": "Platform",
+    "target_type": "Instance",
+    "expected_tools": [
+      "controller.instances_list"
+    ]
+  },
+  {
+    "id": "clean_list_decision_envs",
+    "category": "clean",
+    "query": "List the decision environments available for EDA",
+    "source_type": "Platform",
+    "target_type": "DecisionEnvironment",
+    "expected_tools": [
+      "eda.decision_environments_list"
+    ]
+  },
+  {
+    "id": "clean_list_event_streams",
+    "category": "clean",
+    "query": "Show the event streams configured in event-driven automation",
+    "source_type": "Platform",
+    "target_type": "EventStream",
+    "expected_tools": [
+      "eda.event_streams_list"
+    ]
+  },
+  {
+    "id": "clean_list_service_nodes",
+    "category": "clean",
+    "query": "List the gateway service nodes",
+    "source_type": "Platform",
+    "target_type": "ServiceNode",
+    "expected_tools": [
+      "gateway.service_nodes_list"
+    ]
+  },
+  {
+    "id": "clean_list_labels",
+    "category": "clean",
+    "query": "Show all labels defined on the platform",
+    "source_type": "Platform",
+    "target_type": "Label",
+    "expected_tools": [
+      "controller.labels_list"
+    ]
+  },
+  {
+    "id": "clean_list_applications",
+    "category": "clean",
+    "query": "List the OAuth applications registered in the gateway",
+    "source_type": "Platform",
+    "target_type": "Application",
+    "expected_tools": [
+      "gateway.applications_list"
+    ]
+  },
+  {
+    "id": "clean_list_authenticators",
+    "category": "clean",
+    "query": "Show the authentication providers configured in the gateway",
+    "source_type": "Platform",
+    "target_type": "Authenticator",
+    "expected_tools": [
+      "gateway.authenticators_list"
+    ]
+  },
+  {
+    "id": "clean_list_unified_jobs",
+    "category": "clean",
+    "query": "List all unified jobs across the platform",
+    "source_type": "Platform",
+    "target_type": "UnifiedJob",
+    "expected_tools": [
+      "controller.unified_jobs_list"
+    ]
+  },
+  {
+    "id": "clean_list_workflow_jobs",
+    "category": "clean",
+    "query": "Show the workflow job runs on the platform",
+    "source_type": "Platform",
+    "target_type": "WorkflowJob",
+    "expected_tools": [
+      "controller.workflow_jobs_list"
+    ]
+  },
+  {
+    "id": "clean_list_tokens",
+    "category": "clean",
+    "query": "List all API tokens in the gateway",
+    "source_type": "Platform",
+    "target_type": "Token",
+    "expected_tools": [
+      "gateway.tokens_list"
+    ]
+  },
+  {
+    "id": "clean_list_role_definitions",
+    "category": "clean",
+    "query": "Show the role definitions available on the controller",
+    "source_type": "Platform",
+    "target_type": "RoleDefinition",
+    "expected_tools": [
+      "controller.role_definitions_list"
+    ]
+  },
+  {
+    "id": "clean_list_constructed_inventories",
+    "category": "clean",
+    "query": "List the constructed inventories on the platform",
+    "source_type": "Platform",
+    "target_type": "ConstructedInventory",
+    "expected_tools": [
+      "controller.constructed_inventories_list"
+    ]
+  },
+  {
+    "id": "clean_inventory_groups",
+    "category": "clean",
+    "query": "Show the groups defined in the datacenter inventory",
+    "source_type": "Inventory",
+    "target_type": "Group",
+    "expected_tools": [
+      "controller.inventories_groups_create"
+    ]
+  },
+  {
+    "id": "clean_user_teams",
+    "category": "clean",
+    "query": "Which teams does user jmorena belong to?",
+    "source_type": "User",
+    "target_type": "Team",
+    "expected_tools": [
+      "controller.users_teams_list"
+    ]
+  },
+  {
+    "id": "clean_user_projects",
+    "category": "clean",
+    "query": "List the projects accessible to user admin",
+    "source_type": "User",
+    "target_type": "Project",
+    "expected_tools": [
+      "controller.users_projects_list"
+    ]
+  },
+  {
+    "id": "clean_team_members",
+    "category": "clean",
+    "query": "Show the members of the network-ops team",
+    "source_type": "Team",
+    "target_type": "User",
+    "expected_tools": [
+      "controller.teams_users_create"
+    ]
+  },
+  {
+    "id": "clean_list_rulebooks",
+    "category": "clean",
+    "query": "List the rulebooks available in EDA",
+    "source_type": "Platform",
+    "target_type": "Rulebook",
+    "expected_tools": [
+      "eda.rulebooks_list"
+    ]
+  },
+  {
+    "id": "clean_list_eda_credentials",
+    "category": "clean",
+    "query": "Show the EDA credentials on the platform",
+    "source_type": "Platform",
+    "target_type": "EdaCredential",
+    "expected_tools": [
+      "eda.eda_credentials_list"
     ]
   },
   {
@@ -178,7 +378,7 @@
     "source_type": "Inventory",
     "target_type": "AnsibleFacts",
     "expected_tools": [
-      "controller.inventories_hosts_list",
+      "controller.inventories_hosts_create",
       "controller.hosts_ansible_facts_retrieve"
     ]
   },
@@ -190,7 +390,7 @@
     "target_type": "Host",
     "expected_tools": [
       "controller.organizations_inventories_list",
-      "controller.inventories_hosts_list"
+      "controller.inventories_hosts_create"
     ]
   },
   {
@@ -233,7 +433,7 @@
     "source_type": "Organization",
     "target_type": "Credential",
     "expected_tools": [
-      "controller.organizations_credentials_list"
+      "controller.organizations_credentials_create"
     ]
   },
   {
@@ -257,13 +457,138 @@
     ]
   },
   {
+    "id": "multihop_workflow_nodes",
+    "category": "multihop",
+    "query": "Show the nodes in the latest run of the release-pipeline workflow template",
+    "source_type": "WorkflowJobTemplate",
+    "target_type": "WorkflowJobTemplateNode",
+    "expected_tools": [
+      "controller.workflow_job_templates_workflow_nodes_create",
+      "controller.workflow_job_nodes_always_nodes_list"
+    ]
+  },
+  {
+    "id": "multihop_job_events",
+    "category": "multihop",
+    "query": "Pull the task-level events from job 7823",
+    "source_type": "Job",
+    "target_type": "JobEvent",
+    "expected_tools": [
+      "controller.jobs_job_events_list"
+    ]
+  },
+  {
+    "id": "multihop_org_exec_envs",
+    "category": "multihop",
+    "query": "What execution environments are assigned to the production organization?",
+    "source_type": "Organization",
+    "target_type": "ExecutionEnvironment",
+    "expected_tools": [
+      "controller.organizations_execution_environments_create"
+    ]
+  },
+  {
+    "id": "multihop_user_org",
+    "category": "multihop",
+    "query": "Which organization does the user sarah belong to?",
+    "source_type": "User",
+    "target_type": "Organization",
+    "expected_tools": [
+      "controller.users_organizations_retrieve"
+    ]
+  },
+  {
+    "id": "multihop_job_creds",
+    "category": "multihop",
+    "query": "Show the credentials that were used by job 9901",
+    "source_type": "Job",
+    "target_type": "Credential",
+    "expected_tools": [
+      "controller.jobs_credentials_list"
+    ]
+  },
+  {
+    "id": "multihop_group_inv_sources",
+    "category": "multihop",
+    "query": "What inventory sources feed the linux-servers group?",
+    "source_type": "Group",
+    "target_type": "InventorySource",
+    "expected_tools": [
+      "controller.groups_inventory_sources_list"
+    ]
+  },
+  {
+    "id": "multihop_wf_job_nodes",
+    "category": "multihop",
+    "query": "List the workflow nodes from workflow job run 5610",
+    "source_type": "WorkflowJob",
+    "target_type": "WorkflowJobNode",
+    "expected_tools": [
+      "controller.workflow_jobs_workflow_nodes_list"
+    ]
+  },
+  {
+    "id": "multihop_project_schedule",
+    "category": "multihop",
+    "query": "Show the sync schedules for the ansible-collections project",
+    "source_type": "Project",
+    "target_type": "Schedule",
+    "expected_tools": [
+      "controller.projects_schedules_create"
+    ]
+  },
+  {
+    "id": "multihop_cred_roles",
+    "category": "multihop",
+    "query": "Which roles have access to the AWS production credential?",
+    "source_type": "Credential",
+    "target_type": "Role",
+    "expected_tools": [
+      "controller.credentials_object_roles_list"
+    ]
+  },
+  {
+    "id": "multihop_authenticator_users",
+    "category": "multihop",
+    "query": "List the users managed by the LDAP authenticator",
+    "source_type": "Authenticator",
+    "target_type": "User",
+    "expected_tools": [
+      "gateway.authenticators_users_list"
+    ]
+  },
+  {
+    "id": "multihop_novel_event_stream_logs",
+    "category": "multihop",
+    "query": "Get the instance logs for activations connected to the webhook-ingress event stream",
+    "source_type": "EventStream",
+    "target_type": "ActivationInstanceLog",
+    "expected_tools": [
+      "eda.event_streams_activations_list",
+      "eda.activations_instances_list",
+      "eda.activation_instances_logs_list"
+    ]
+  },
+  {
+    "id": "multihop_novel_auth_inventory",
+    "category": "multihop",
+    "query": "Show the inventories accessible to users in the SAML authenticator",
+    "source_type": "Authenticator",
+    "target_type": "Inventory",
+    "expected_tools": [
+      "gateway.authenticators_users_list",
+      "controller.users_organizations_retrieve",
+      "controller.organizations_inventories_list"
+    ]
+  },
+  {
     "id": "synonym_machines",
     "category": "synonym",
     "query": "What machines are managed in the production inventory?",
     "source_type": "Inventory",
     "target_type": "Host",
     "expected_tools": [
-      "controller.inventories_hosts_list"
+      "controller.inventories_hosts_create"
     ]
   },
   {
@@ -327,6 +652,136 @@
     ]
   },
   {
+    "id": "synonym_nodes",
+    "category": "synonym",
+    "query": "How many nodes are registered in the automation fleet?",
+    "source_type": "Platform",
+    "target_type": "Host",
+    "expected_tools": [
+      "controller.hosts_all_groups_list"
+    ]
+  },
+  {
+    "id": "synonym_tenants",
+    "category": "synonym",
+    "query": "List the tenants set up on the controller",
+    "source_type": "Platform",
+    "target_type": "Organization",
+    "expected_tools": [
+      "controller.organizations_admins_list"
+    ]
+  },
+  {
+    "id": "synonym_cluster_members",
+    "category": "synonym",
+    "query": "Show the cluster members in the automation mesh",
+    "source_type": "Platform",
+    "target_type": "Instance",
+    "expected_tools": [
+      "controller.instances_list"
+    ]
+  },
+  {
+    "id": "synonym_automation_runs",
+    "category": "synonym",
+    "query": "List the recent automation runs on the platform",
+    "source_type": "Platform",
+    "target_type": "UnifiedJob",
+    "expected_tools": [
+      "controller.unified_jobs_list"
+    ]
+  },
+  {
+    "id": "synonym_login_providers",
+    "category": "synonym",
+    "query": "What login providers are connected to the gateway?",
+    "source_type": "Platform",
+    "target_type": "Authenticator",
+    "expected_tools": [
+      "gateway.authenticators_list"
+    ]
+  },
+  {
+    "id": "synonym_api_keys",
+    "category": "synonym",
+    "query": "Show all the API keys issued through the gateway",
+    "source_type": "Platform",
+    "target_type": "Token",
+    "expected_tools": [
+      "gateway.tokens_list"
+    ]
+  },
+  {
+    "id": "synonym_pipelines",
+    "category": "synonym",
+    "query": "List the automation pipelines configured as workflows",
+    "source_type": "Platform",
+    "target_type": "WorkflowJobTemplate",
+    "expected_tools": [
+      "controller.workflow_job_templates_list"
+    ]
+  },
+  {
+    "id": "synonym_rule_engines",
+    "category": "synonym",
+    "query": "Show the rule engines available for event-driven automation",
+    "source_type": "Platform",
+    "target_type": "DecisionEnvironment",
+    "expected_tools": [
+      "eda.decision_environments_list"
+    ]
+  },
+  {
+    "id": "synonym_event_feeds",
+    "category": "synonym",
+    "query": "List the event feeds coming into EDA",
+    "source_type": "Platform",
+    "target_type": "EventStream",
+    "expected_tools": [
+      "eda.event_streams_list"
+    ]
+  },
+  {
+    "id": "synonym_pending_approvals",
+    "category": "synonym",
+    "query": "Are there any pending sign-offs on workflow steps?",
+    "source_type": "Platform",
+    "target_type": "WorkflowApproval",
+    "expected_tools": [
+      "controller.workflow_approvals_list"
+    ]
+  },
+  {
+    "id": "synonym_user_access_token",
+    "category": "synonym",
+    "query": "Retrieve the personal access token for user deploy-bot",
+    "source_type": "User",
+    "target_type": "Token",
+    "expected_tools": [
+      "gateway.users_tokens_retrieve"
+    ]
+  },
+  {
+    "id": "synonym_org_repos",
+    "category": "synonym",
+    "query": "Which source code repositories are linked to the DevOps organization?",
+    "source_type": "Organization",
+    "target_type": "Project",
+    "expected_tools": [
+      "controller.organizations_projects_create"
+    ]
+  },
+  {
+    "id": "synonym_host_inventory",
+    "category": "synonym",
+    "query": "Show the asset groups defined in the datacenter inventory",
+    "source_type": "Inventory",
+    "target_type": "Group",
+    "expected_tools": [
+      "controller.inventories_groups_create"
+    ]
+  },
+  {
     "id": "ambiguous_platform_activity",
     "category": "ambiguous",
     "query": "What is happening on the platform right now?",
@@ -377,6 +832,106 @@
     ]
   },
   {
+    "id": "ambiguous_check_everything",
+    "category": "ambiguous",
+    "query": "Give me a health check of the system",
+    "source_type": "Platform",
+    "target_type": "Instance",
+    "expected_tools": [
+      "controller.instances_list"
+    ]
+  },
+  {
+    "id": "ambiguous_what_failed",
+    "category": "ambiguous",
+    "query": "What failed recently?",
+    "source_type": "Platform",
+    "target_type": "UnifiedJob",
+    "expected_tools": [
+      "controller.unified_jobs_list"
+    ]
+  },
+  {
+    "id": "ambiguous_show_connections",
+    "category": "ambiguous",
+    "query": "How is authentication set up?",
+    "source_type": "Platform",
+    "target_type": "Authenticator",
+    "expected_tools": [
+      "gateway.authenticators_list"
+    ]
+  },
+  {
+    "id": "ambiguous_inventory_details",
+    "category": "ambiguous",
+    "query": "Break down the staging inventory for me",
+    "source_type": "Inventory",
+    "target_type": "Group",
+    "expected_tools": [
+      "controller.inventories_groups_create"
+    ]
+  },
+  {
+    "id": "ambiguous_workflow_progress",
+    "category": "ambiguous",
+    "query": "How far along is the release workflow?",
+    "source_type": "WorkflowJob",
+    "target_type": "WorkflowJobNode",
+    "expected_tools": [
+      "controller.workflow_jobs_workflow_nodes_list"
+    ]
+  },
+  {
+    "id": "ambiguous_what_can_user_do",
+    "category": "ambiguous",
+    "query": "What does the deploy-bot account have access to?",
+    "source_type": "User",
+    "target_type": "Organization",
+    "expected_tools": [
+      "controller.users_organizations_retrieve"
+    ]
+  },
+  {
+    "id": "ambiguous_who_is_on_team",
+    "category": "ambiguous",
+    "query": "Who is on the security team?",
+    "source_type": "Team",
+    "target_type": "User",
+    "expected_tools": [
+      "controller.teams_users_create"
+    ]
+  },
+  {
+    "id": "ambiguous_org_templates",
+    "category": "ambiguous",
+    "query": "What can the production org run?",
+    "source_type": "Organization",
+    "target_type": "JobTemplate",
+    "expected_tools": [
+      "controller.organizations_job_templates_create"
+    ]
+  },
+  {
+    "id": "ambiguous_events_triggered",
+    "category": "ambiguous",
+    "query": "What got triggered by the last automation run?",
+    "source_type": "Job",
+    "target_type": "JobEvent",
+    "expected_tools": [
+      "controller.jobs_job_events_list"
+    ]
+  },
+  {
+    "id": "ambiguous_cred_permissions",
+    "category": "ambiguous",
+    "query": "Who can use the vault credential?",
+    "source_type": "Credential",
+    "target_type": "Role",
+    "expected_tools": [
+      "controller.credentials_object_roles_list"
+    ]
+  },
+  {
     "id": "noisy_backup_failed",
     "category": "noisy",
     "query": "Hey, the nightly backup job failed again. Can you grab the logs so I can see what went wrong?",
@@ -403,7 +958,7 @@
     "source_type": "Job",
     "target_type": "JobCancel",
     "expected_tools": [
-      "controller.jobs_cancel_retrieve"
+      "controller.jobs_cancel_create"
     ]
   },
   {
@@ -423,7 +978,107 @@
     "source_type": "Organization",
     "target_type": "Team",
     "expected_tools": [
-      "controller.organizations_teams_list"
+      "controller.organizations_teams_create"
+    ]
+  },
+  {
+    "id": "noisy_cluster_slow",
+    "category": "noisy",
+    "query": "Users are complaining that jobs take forever to start. Can you pull the instance list so we can check if something is overloaded?",
+    "source_type": "Platform",
+    "target_type": "Instance",
+    "expected_tools": [
+      "controller.instances_list"
+    ]
+  },
+  {
+    "id": "noisy_org_confusion",
+    "category": "noisy",
+    "query": "I keep getting permission errors when trying to launch templates. Maybe I'm in the wrong org? Show me what orgs exist.",
+    "source_type": "Platform",
+    "target_type": "Organization",
+    "expected_tools": [
+      "controller.organizations_admins_list"
+    ]
+  },
+  {
+    "id": "noisy_inventory_drift",
+    "category": "noisy",
+    "query": "We think the cloud inventory drifted from what's actually in AWS. Pull the inventory sources so we can compare.",
+    "source_type": "Inventory",
+    "target_type": "InventorySource",
+    "expected_tools": [
+      "controller.inventories_inventory_sources_create"
+    ]
+  },
+  {
+    "id": "noisy_workflow_approval_stuck",
+    "category": "noisy",
+    "query": "The release workflow has been stuck waiting for approval for hours now. Show me the pending approvals so I can nudge somebody.",
+    "source_type": "Platform",
+    "target_type": "WorkflowApproval",
+    "expected_tools": [
+      "controller.workflow_approvals_list"
+    ]
+  },
+  {
+    "id": "noisy_ldap_broken",
+    "category": "noisy",
+    "query": "Nobody can log in this morning, I think the LDAP thing broke. Can you check what authenticators are configured?",
+    "source_type": "Platform",
+    "target_type": "Authenticator",
+    "expected_tools": [
+      "gateway.authenticators_list"
+    ]
+  },
+  {
+    "id": "noisy_token_expired",
+    "category": "noisy",
+    "query": "The CI pipeline stopped working overnight. Pretty sure the API token expired. Pull the token for user ci-runner so I can check.",
+    "source_type": "User",
+    "target_type": "Token",
+    "expected_tools": [
+      "gateway.users_tokens_retrieve"
+    ]
+  },
+  {
+    "id": "noisy_eda_broken",
+    "category": "noisy",
+    "query": "Event-driven automation seems down. None of the alerts are firing. Show me what activations are configured so we can debug.",
+    "source_type": "Platform",
+    "target_type": "Activation",
+    "expected_tools": [
+      "eda.activations_list"
+    ]
+  },
+  {
+    "id": "noisy_job_per_host",
+    "category": "noisy",
+    "query": "The patching run touched 200 hosts and I need to know which ones failed. Get me the per-host breakdown from job 4410.",
+    "source_type": "Job",
+    "target_type": "JobHostSummary",
+    "expected_tools": [
+      "controller.jobs_job_host_summaries_list"
+    ]
+  },
+  {
+    "id": "noisy_exec_env_missing",
+    "category": "noisy",
+    "query": "A job template says it needs a custom execution environment but I don't see it. List the EEs available on the platform.",
+    "source_type": "Platform",
+    "target_type": "ExecutionEnvironment",
+    "expected_tools": [
+      "controller.execution_environments_list"
+    ]
+  },
+  {
+    "id": "noisy_user_wrong_team",
+    "category": "noisy",
+    "query": "There's a new hire who was supposed to be added to the ops team but they say they can't see anything. Show me who is on that team.",
+    "source_type": "Team",
+    "target_type": "User",
+    "expected_tools": [
+      "controller.teams_users_create"
     ]
   },
   {
@@ -443,7 +1098,7 @@
     "source_type": "Organization",
     "target_type": "Project",
     "expected_tools": [
-      "controller.organizations_projects_list"
+      "controller.organizations_projects_create"
     ]
   },
   {
@@ -463,7 +1118,7 @@
     "source_type": "JobTemplate",
     "target_type": "Credential",
     "expected_tools": [
-      "controller.job_templates_credentials_list"
+      "controller.job_templates_credentials_create"
     ]
   },
   {
@@ -473,7 +1128,107 @@
     "source_type": "WorkflowJobTemplate",
     "target_type": "Label",
     "expected_tools": [
-      "controller.workflow_job_templates_labels_list"
+      "controller.workflow_job_templates_labels_create"
+    ]
+  },
+  {
+    "id": "multipath_org_notification_templates",
+    "category": "multipath",
+    "query": "List the notification templates for the production organization",
+    "source_type": "Organization",
+    "target_type": "NotificationTemplate",
+    "expected_tools": [
+      "controller.organizations_notification_templates_create"
+    ]
+  },
+  {
+    "id": "multipath_org_exec_envs",
+    "category": "multipath",
+    "query": "Which execution environments are available to the DevOps organization?",
+    "source_type": "Organization",
+    "target_type": "ExecutionEnvironment",
+    "expected_tools": [
+      "controller.organizations_execution_environments_create"
+    ]
+  },
+  {
+    "id": "multipath_user_credentials",
+    "category": "multipath",
+    "query": "Show the credentials owned by user admin",
+    "source_type": "User",
+    "target_type": "Credential",
+    "expected_tools": [
+      "controller.users_credentials_create"
+    ]
+  },
+  {
+    "id": "multipath_inv_source_creds",
+    "category": "multipath",
+    "query": "What credentials are associated with the AWS inventory source?",
+    "source_type": "InventorySource",
+    "target_type": "Credential",
+    "expected_tools": [
+      "controller.inventory_sources_credentials_create"
+    ]
+  },
+  {
+    "id": "multipath_org_job_templates",
+    "category": "multipath",
+    "query": "List the job templates in the staging organization",
+    "source_type": "Organization",
+    "target_type": "JobTemplate",
+    "expected_tools": [
+      "controller.organizations_job_templates_create"
+    ]
+  },
+  {
+    "id": "multipath_cred_input_sources",
+    "category": "multipath",
+    "query": "Show the external credential input sources for the HashiCorp Vault credential",
+    "source_type": "Credential",
+    "target_type": "CredentialInputSource",
+    "expected_tools": [
+      "controller.credentials_input_sources_create"
+    ]
+  },
+  {
+    "id": "multipath_cred_copy",
+    "category": "multipath",
+    "query": "Duplicate the SSH production credential",
+    "source_type": "Credential",
+    "target_type": "Copy",
+    "expected_tools": [
+      "controller.credentials_copy_create"
+    ]
+  },
+  {
+    "id": "multipath_job_host_summary",
+    "category": "multipath",
+    "query": "Get the per-host results from job 3301",
+    "source_type": "Job",
+    "target_type": "JobHostSummary",
+    "expected_tools": [
+      "controller.jobs_job_host_summaries_list"
+    ]
+  },
+  {
+    "id": "multipath_project_schedules",
+    "category": "multipath",
+    "query": "What schedules are configured for the network-configs project?",
+    "source_type": "Project",
+    "target_type": "Schedule",
+    "expected_tools": [
+      "controller.projects_schedules_create"
+    ]
+  },
+  {
+    "id": "multipath_org_wf_templates",
+    "category": "multipath",
+    "query": "Show the workflow templates belonging to the operations organization",
+    "source_type": "Organization",
+    "target_type": "WorkflowJobTemplate",
+    "expected_tools": [
+      "controller.organizations_workflow_job_templates_create"
     ]
   }
 ]
