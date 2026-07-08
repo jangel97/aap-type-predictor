@@ -14,6 +14,7 @@ Five strategies are compared:
 
 - **Function calling** — All 1,060 tools are passed as structured function definitions. The model uses its native tool-calling mechanism to select which functions to invoke.
 - **Text baseline** — All 1,060 tools are listed as plain text in the system prompt (`- ToolName: (InputType) -> (OutputType)`). The model responds with a JSON array of tool names.
+- **Few-shot Text** — Same as text baseline, but with 10 in-context examples showing `(query, [tool_names])` mappings. Tool names are resolved from training examples via BFS. This tests whether adding examples to direct tool selection can match the TCR decomposition.
 - **Zero-shot TCR** — Instead of tools, the model receives the 79 entity type names and predicts a source and target type. BFS graph search then resolves the types to a tool chain.
 - **Few-shot TCR** — Same as zero-shot TCR, but with 10 in-context examples drawn from the training set (excluding test type pairs). This gives the LLM domain-specific demonstrations of how queries map to entity types.
 - **Encoder TCR** — Same type prediction + graph search pipeline, but type prediction is done by the trained 475K-parameter classifier instead of prompting an LLM.
@@ -24,9 +25,12 @@ For all strategies, precision, recall, and F1 are computed by comparing the pred
 |---|---|---|---|---|
 | Function calling | Gemini 2.5 Pro | 0.326 | 0.357 | 0.333 |
 | Text baseline | Gemini 2.5 Pro | 0.449 | 0.593 | 0.495 |
+| Few-shot Text | Gemini 2.5 Flash | 0.478 | 0.560 | 0.503 |
 | Zero-shot TCR | Gemini 2.5 Pro | 0.734 | 0.730 | 0.730 |
 | Few-shot TCR | Gemini 2.5 Pro | 0.832 | 0.820 | 0.822 |
 | **Encoder TCR** | **475K params** | **0.848** | **0.861** | **0.852** |
+
+Adding 10 examples to the text baseline (few-shot text) barely moves F1 (0.503 vs 0.495), even though the same 10 examples under TCR decomposition (few-shot TCR) raise F1 from 0.730 to 0.822. At 1,060 tools, the text baseline's prompt is ~18K tokens of tool definitions — adding examples cannot overcome the fundamental difficulty of selecting from that many candidates. The TCR decomposition reduces the problem to 79 entity types (~300 tokens), where examples are far more effective.
 
 Per-category (encoder, best fold):
 
@@ -104,6 +108,8 @@ python evaluate.py --threshold-sweep
 # Benchmark Gemini 2.5 Pro (requires GEMINI_API_KEY)
 python benchmark_gemini.py
 python benchmark_gemini.py --strategy few_shot_tcr
+python benchmark_gemini.py --strategy few_shot_text
+python benchmark_gemini.py --strategy few_shot_text --model gemini-2.5-flash
 ```
 
 ## Data
