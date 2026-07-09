@@ -1,12 +1,12 @@
 {
   "model": "gemini-2.5-flash",
-  "strategy": "few_shot_text",
+  "strategy": "few_shot_tcr",
   "n_tools": 1060,
   "n_queries": 122,
-  "precision": 0.492304189435337,
-  "recall": 0.5683060109289617,
-  "f1": 0.5154566744730679,
-  "hallucinated_total": 1,
+  "precision": 0.8114754098360656,
+  "recall": 0.8155737704918032,
+  "f1": 0.8114754098360656,
+  "hallucinated_total": 0,
   "per_query": [
     {
       "id": "list_job_templates",
@@ -22,7 +22,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "JobTemplate",
+      "exp_src": "Platform",
+      "exp_tgt": "JobTemplate",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "launch_job_template",
@@ -31,14 +37,20 @@
         "controller.job_templates_jobs_list"
       ],
       "predicted": [
-        "controller.job_templates_launch_create"
+        "controller.job_templates_jobs_list"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "JobTemplate",
+      "pred_tgt": "Job",
+      "exp_src": "JobTemplate",
+      "exp_tgt": "Job",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "get_job_stdout",
@@ -47,15 +59,20 @@
         "controller.jobs_stdout_retrieve"
       ],
       "predicted": [
-        "controller.jobs_retrieve",
         "controller.jobs_stdout_retrieve"
       ],
       "hallucinated": [],
-      "precision": 0.5,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Job",
+      "pred_tgt": "UnifiedJobStdout",
+      "exp_src": "Job",
+      "exp_tgt": "UnifiedJobStdout",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_inventory_hosts",
@@ -64,15 +81,20 @@
         "controller.inventories_hosts_create"
       ],
       "predicted": [
-        "controller.inventories_retrieve",
-        "controller.inventories_hosts_list"
+        "controller.inventories_hosts_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Inventory",
+      "pred_tgt": "Host",
+      "exp_src": "Inventory",
+      "exp_tgt": "Host",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_credentials",
@@ -88,7 +110,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Credential",
+      "exp_src": "Platform",
+      "exp_tgt": "Credential",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_projects",
@@ -104,7 +132,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Project",
+      "exp_src": "Platform",
+      "exp_tgt": "Project",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_eda_activations",
@@ -120,7 +154,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Activation",
+      "exp_src": "Platform",
+      "exp_tgt": "Activation",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_template_schedules",
@@ -129,14 +169,20 @@
         "controller.job_templates_schedules_create"
       ],
       "predicted": [
-        "controller.job_templates_schedules_list"
+        "controller.job_templates_schedules_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "JobTemplate",
+      "pred_tgt": "Schedule",
+      "exp_src": "JobTemplate",
+      "exp_tgt": "Schedule",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_instance_groups",
@@ -152,7 +198,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "InstanceGroup",
+      "exp_src": "Platform",
+      "exp_tgt": "InstanceGroup",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_org_teams",
@@ -161,15 +213,20 @@
         "controller.organizations_teams_create"
       ],
       "predicted": [
-        "controller.organizations_retrieve",
-        "controller.organizations_teams_list"
+        "controller.organizations_teams_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 4,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Organization",
+      "pred_tgt": "Team",
+      "exp_src": "Organization",
+      "exp_tgt": "Team",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "get_host_facts",
@@ -178,15 +235,20 @@
         "controller.hosts_ansible_facts_retrieve"
       ],
       "predicted": [
-        "controller.hosts_retrieve",
         "controller.hosts_ansible_facts_retrieve"
       ],
       "hallucinated": [],
-      "precision": 0.5,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Host",
+      "pred_tgt": "AnsibleFacts",
+      "exp_src": "Host",
+      "exp_tgt": "AnsibleFacts",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_workflow_templates",
@@ -202,7 +264,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "WorkflowJobTemplate",
+      "exp_src": "Platform",
+      "exp_tgt": "WorkflowJobTemplate",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "get_inventory_sources",
@@ -211,14 +279,20 @@
         "controller.inventories_inventory_sources_create"
       ],
       "predicted": [
-        "controller.inventories_inventory_sources_list"
+        "controller.inventories_inventory_sources_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Inventory",
+      "pred_tgt": "InventorySource",
+      "exp_src": "Inventory",
+      "exp_tgt": "InventorySource",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_notification_templates",
@@ -234,7 +308,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "NotificationTemplate",
+      "exp_src": "Platform",
+      "exp_tgt": "NotificationTemplate",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "get_project_playbooks",
@@ -243,15 +323,20 @@
         "controller.projects_playbooks_retrieve"
       ],
       "predicted": [
-        "controller.projects_retrieve",
         "controller.projects_playbooks_retrieve"
       ],
       "hallucinated": [],
-      "precision": 0.5,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Project",
+      "pred_tgt": "ProjectPlaybooks",
+      "exp_src": "Project",
+      "exp_tgt": "ProjectPlaybooks",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_platform_hosts",
@@ -260,14 +345,20 @@
         "controller.hosts_all_groups_list"
       ],
       "predicted": [
-        "controller.hosts_list"
+        "controller.hosts_all_groups_list"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Host",
+      "exp_src": "Platform",
+      "exp_tgt": "Host",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_organizations",
@@ -276,14 +367,20 @@
         "controller.organizations_admins_list"
       ],
       "predicted": [
-        "controller.organizations_retrieve"
+        "controller.organizations_admins_list"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 6,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Organization",
+      "exp_src": "Platform",
+      "exp_tgt": "Organization",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_instances",
@@ -291,15 +388,19 @@
       "expected": [
         "controller.instances_list"
       ],
-      "predicted": [
-        "controller.instances_list"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "ServiceCluster",
+      "pred_tgt": "Instance",
+      "exp_src": "Platform",
+      "exp_tgt": "Instance",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_decision_envs",
@@ -315,7 +416,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "DecisionEnvironment",
+      "exp_src": "Platform",
+      "exp_tgt": "DecisionEnvironment",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_event_streams",
@@ -331,7 +438,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "EventStream",
+      "exp_src": "Platform",
+      "exp_tgt": "EventStream",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_service_nodes",
@@ -347,7 +460,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ServiceNode",
+      "exp_src": "Platform",
+      "exp_tgt": "ServiceNode",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_labels",
@@ -363,7 +482,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Label",
+      "exp_src": "Platform",
+      "exp_tgt": "Label",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_applications",
@@ -379,7 +504,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Application",
+      "exp_src": "Platform",
+      "exp_tgt": "Application",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_authenticators",
@@ -388,14 +519,20 @@
         "gateway.authenticators_list"
       ],
       "predicted": [
-        "gateway.authenticators_list"
+        "gateway.authenticator_maps_authenticators_list"
       ],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "AuthenticatorMap",
+      "pred_tgt": "Authenticator",
+      "exp_src": "Platform",
+      "exp_tgt": "Authenticator",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_unified_jobs",
@@ -411,7 +548,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "UnifiedJob",
+      "exp_src": "Platform",
+      "exp_tgt": "UnifiedJob",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_workflow_jobs",
@@ -427,7 +570,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "WorkflowJob",
+      "exp_src": "Platform",
+      "exp_tgt": "WorkflowJob",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_tokens",
@@ -443,7 +592,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Token",
+      "exp_src": "Platform",
+      "exp_tgt": "Token",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_role_definitions",
@@ -459,7 +614,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 9,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "RoleDefinition",
+      "exp_src": "Platform",
+      "exp_tgt": "RoleDefinition",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_constructed_inventories",
@@ -475,7 +636,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ConstructedInventory",
+      "exp_src": "Platform",
+      "exp_tgt": "ConstructedInventory",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_inventory_groups",
@@ -484,14 +651,20 @@
         "controller.inventories_groups_create"
       ],
       "predicted": [
-        "controller.inventories_groups_list"
+        "controller.inventories_groups_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Inventory",
+      "pred_tgt": "Group",
+      "exp_src": "Inventory",
+      "exp_tgt": "Group",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_user_teams",
@@ -500,15 +673,20 @@
         "controller.users_teams_list"
       ],
       "predicted": [
-        "gateway.users_retrieve",
-        "gateway.users_teams_list"
+        "controller.users_teams_list"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "User",
+      "pred_tgt": "Team",
+      "exp_src": "User",
+      "exp_tgt": "Team",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_user_projects",
@@ -517,15 +695,20 @@
         "controller.users_projects_list"
       ],
       "predicted": [
-        "controller.users_retrieve",
         "controller.users_projects_list"
       ],
       "hallucinated": [],
-      "precision": 0.5,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "User",
+      "pred_tgt": "Project",
+      "exp_src": "User",
+      "exp_tgt": "Project",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_team_members",
@@ -534,14 +717,20 @@
         "controller.teams_users_create"
       ],
       "predicted": [
-        "controller.teams_users_list"
+        "controller.teams_users_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Team",
+      "pred_tgt": "User",
+      "exp_src": "Team",
+      "exp_tgt": "User",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_rulebooks",
@@ -557,7 +746,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Rulebook",
+      "exp_src": "Platform",
+      "exp_tgt": "Rulebook",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_eda_credentials",
@@ -573,7 +768,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "EdaCredential",
+      "exp_src": "Platform",
+      "exp_tgt": "EdaCredential",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "job_template_events",
@@ -591,7 +792,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 4,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "JobTemplate",
+      "pred_tgt": "JobEvent",
+      "exp_src": "JobTemplate",
+      "exp_tgt": "JobEvent",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "job_template_host_summaries",
@@ -609,7 +816,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 4,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "JobTemplate",
+      "pred_tgt": "JobHostSummary",
+      "exp_src": "JobTemplate",
+      "exp_tgt": "JobHostSummary",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "inventory_host_facts",
@@ -619,16 +832,21 @@
         "controller.hosts_ansible_facts_retrieve"
       ],
       "predicted": [
-        "controller.inventories_list",
-        "controller.inventories_hosts_list",
+        "controller.inventories_hosts_create",
         "controller.hosts_ansible_facts_retrieve"
       ],
       "hallucinated": [],
-      "precision": 0.3333333333333333,
-      "recall": 0.5,
-      "f1": 0.4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 0.6666666666666666
+      "graph_valid_precision": 1.0,
+      "pred_src": "Inventory",
+      "pred_tgt": "AnsibleFacts",
+      "exp_src": "Inventory",
+      "exp_tgt": "AnsibleFacts",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "org_inventories_hosts",
@@ -638,16 +856,21 @@
         "controller.inventories_hosts_create"
       ],
       "predicted": [
-        "controller.organizations_retrieve",
         "controller.organizations_inventories_list",
-        "controller.inventories_hosts_list"
+        "controller.inventories_hosts_create"
       ],
       "hallucinated": [],
-      "precision": 0.3333333333333333,
-      "recall": 0.5,
-      "f1": 0.4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 0.6666666666666666
+      "graph_valid_precision": 1.0,
+      "pred_src": "Organization",
+      "pred_tgt": "Host",
+      "exp_src": "Organization",
+      "exp_tgt": "Host",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "activation_instance_logs",
@@ -657,16 +880,21 @@
         "eda.activation_instances_logs_list"
       ],
       "predicted": [
-        "eda.activations_list",
         "eda.activations_instances_list",
         "eda.activation_instances_logs_list"
       ],
       "hallucinated": [],
-      "precision": 0.6666666666666666,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.8,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 0.6666666666666666
+      "graph_valid_precision": 1.0,
+      "pred_src": "Activation",
+      "pred_tgt": "ActivationInstanceLog",
+      "exp_src": "Activation",
+      "exp_tgt": "ActivationInstanceLog",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "platform_playbooks",
@@ -684,7 +912,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ProjectPlaybooks",
+      "exp_src": "Platform",
+      "exp_tgt": "ProjectPlaybooks",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "template_job_stdout",
@@ -694,16 +928,21 @@
         "controller.jobs_stdout_retrieve"
       ],
       "predicted": [
-        "controller.job_templates_list",
         "controller.job_templates_jobs_list",
         "controller.jobs_stdout_retrieve"
       ],
       "hallucinated": [],
-      "precision": 0.6666666666666666,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.8,
+      "f1": 1.0,
       "candidates": 4,
-      "graph_valid_precision": 0.6666666666666666
+      "graph_valid_precision": 1.0,
+      "pred_src": "JobTemplate",
+      "pred_tgt": "UnifiedJobStdout",
+      "exp_src": "JobTemplate",
+      "exp_tgt": "UnifiedJobStdout",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "org_credentials",
@@ -712,14 +951,20 @@
         "controller.organizations_credentials_create"
       ],
       "predicted": [
-        "controller.organizations_credentials_list"
+        "controller.organizations_credentials_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Organization",
+      "pred_tgt": "Credential",
+      "exp_src": "Organization",
+      "exp_tgt": "Credential",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "audit_rule_actions",
@@ -728,15 +973,20 @@
         "eda.audit_rules_actions_list"
       ],
       "predicted": [
-        "eda.audit_rules_retrieve",
         "eda.audit_rules_actions_list"
       ],
       "hallucinated": [],
-      "precision": 0.5,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "AuditRule",
+      "pred_tgt": "AuditAction",
+      "exp_src": "AuditRule",
+      "exp_tgt": "AuditAction",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "host_activity",
@@ -752,7 +1002,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Host",
+      "pred_tgt": "ActivityStream",
+      "exp_src": "Host",
+      "exp_tgt": "ActivityStream",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_workflow_nodes",
@@ -762,15 +1018,20 @@
         "controller.workflow_job_nodes_always_nodes_list"
       ],
       "predicted": [
-        "controller.workflow_job_templates_workflow_jobs_list",
-        "controller.workflow_jobs_workflow_nodes_list"
+        "controller.workflow_job_templates_workflow_nodes_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
       "candidates": 5,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "WorkflowJobTemplate",
+      "pred_tgt": "WorkflowJobNode",
+      "exp_src": "WorkflowJobTemplate",
+      "exp_tgt": "WorkflowJobTemplateNode",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "multihop_job_events",
@@ -779,15 +1040,20 @@
         "controller.jobs_job_events_list"
       ],
       "predicted": [
-        "controller.jobs_retrieve",
         "controller.jobs_job_events_list"
       ],
       "hallucinated": [],
-      "precision": 0.5,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Job",
+      "pred_tgt": "JobEvent",
+      "exp_src": "Job",
+      "exp_tgt": "JobEvent",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_org_exec_envs",
@@ -796,15 +1062,20 @@
         "controller.organizations_execution_environments_create"
       ],
       "predicted": [
-        "controller.organizations_retrieve",
-        "controller.organizations_execution_environments_list"
+        "controller.organizations_execution_environments_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Organization",
+      "pred_tgt": "ExecutionEnvironment",
+      "exp_src": "Organization",
+      "exp_tgt": "ExecutionEnvironment",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_user_org",
@@ -813,17 +1084,20 @@
         "controller.users_organizations_retrieve"
       ],
       "predicted": [
-        "controller.users_retrieve",
-        "controller.users_organizations_list"
+        "controller.users_organizations_retrieve"
       ],
-      "hallucinated": [
-        "controller.users_organizations_list"
-      ],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "User",
+      "pred_tgt": "Organization",
+      "exp_src": "User",
+      "exp_tgt": "Organization",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_job_creds",
@@ -839,7 +1113,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Job",
+      "pred_tgt": "Credential",
+      "exp_src": "Job",
+      "exp_tgt": "Credential",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_group_inv_sources",
@@ -855,7 +1135,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Group",
+      "pred_tgt": "InventorySource",
+      "exp_src": "Group",
+      "exp_tgt": "InventorySource",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_wf_job_nodes",
@@ -871,7 +1157,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "WorkflowJob",
+      "pred_tgt": "WorkflowJobNode",
+      "exp_src": "WorkflowJob",
+      "exp_tgt": "WorkflowJobNode",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_project_schedule",
@@ -880,15 +1172,20 @@
         "controller.projects_schedules_create"
       ],
       "predicted": [
-        "controller.projects_retrieve",
-        "controller.projects_schedules_list"
+        "controller.projects_schedules_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Project",
+      "pred_tgt": "Schedule",
+      "exp_src": "Project",
+      "exp_tgt": "Schedule",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_cred_roles",
@@ -904,7 +1201,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Credential",
+      "pred_tgt": "Role",
+      "exp_src": "Credential",
+      "exp_tgt": "Role",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_authenticator_users",
@@ -913,15 +1216,20 @@
         "gateway.authenticators_users_list"
       ],
       "predicted": [
-        "gateway.authenticators_list",
         "gateway.authenticators_users_list"
       ],
       "hallucinated": [],
-      "precision": 0.5,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Authenticator",
+      "pred_tgt": "User",
+      "exp_src": "Authenticator",
+      "exp_tgt": "User",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_novel_event_stream_logs",
@@ -941,7 +1249,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "EventStream",
+      "pred_tgt": "ActivationInstanceLog",
+      "exp_src": "EventStream",
+      "exp_tgt": "ActivationInstanceLog",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_novel_auth_inventory",
@@ -952,17 +1266,22 @@
         "controller.organizations_inventories_list"
       ],
       "predicted": [
-        "gateway.authenticators_list",
         "gateway.authenticators_users_list",
-        "controller.users_access_list_list",
-        "controller.inventories_list"
+        "controller.users_organizations_retrieve",
+        "controller.organizations_inventories_list"
       ],
       "hallucinated": [],
-      "precision": 0.25,
-      "recall": 0.3333333333333333,
-      "f1": 0.28571428571428575,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 6,
-      "graph_valid_precision": 0.25
+      "graph_valid_precision": 1.0,
+      "pred_src": "Authenticator",
+      "pred_tgt": "Inventory",
+      "exp_src": "Authenticator",
+      "exp_tgt": "Inventory",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_machines",
@@ -971,14 +1290,20 @@
         "controller.inventories_hosts_create"
       ],
       "predicted": [
-        "controller.inventories_hosts_list"
+        "controller.inventories_hosts_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Inventory",
+      "pred_tgt": "Host",
+      "exp_src": "Inventory",
+      "exp_tgt": "Host",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_recipes",
@@ -987,15 +1312,21 @@
         "controller.projects_playbooks_retrieve"
       ],
       "predicted": [
-        "controller.job_templates_list",
-        "controller.workflow_job_templates_list"
+        "controller.projects_inventories_retrieve",
+        "controller.inventories_job_templates_list"
       ],
       "hallucinated": [],
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
       "candidates": 1,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Project",
+      "pred_tgt": "JobTemplate",
+      "exp_src": "Project",
+      "exp_tgt": "ProjectPlaybooks",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "synonym_runtimes",
@@ -1011,7 +1342,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ExecutionEnvironment",
+      "exp_src": "Platform",
+      "exp_tgt": "ExecutionEnvironment",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_alerts",
@@ -1027,7 +1364,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "NotificationTemplate",
+      "exp_src": "Platform",
+      "exp_tgt": "NotificationTemplate",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_event_handlers",
@@ -1043,7 +1386,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Activation",
+      "exp_src": "Platform",
+      "exp_tgt": "Activation",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_secrets",
@@ -1059,7 +1408,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Credential",
+      "exp_src": "Platform",
+      "exp_tgt": "Credential",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_node_groups",
@@ -1067,15 +1422,19 @@
       "expected": [
         "controller.instance_groups_list"
       ],
-      "predicted": [
-        "controller.instance_groups_list"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "ExecutionEnvironment",
+      "pred_tgt": "InstanceGroup",
+      "exp_src": "Platform",
+      "exp_tgt": "InstanceGroup",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "synonym_nodes",
@@ -1091,7 +1450,13 @@
       "recall": 0.0,
       "f1": 0,
       "candidates": 3,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ServiceNode",
+      "exp_src": "Platform",
+      "exp_tgt": "Host",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "synonym_tenants",
@@ -1100,14 +1465,20 @@
         "controller.organizations_admins_list"
       ],
       "predicted": [
-        "controller.organizations_retrieve"
+        "controller.organizations_admins_list"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 6,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Organization",
+      "exp_src": "Platform",
+      "exp_tgt": "Organization",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_cluster_members",
@@ -1116,14 +1487,20 @@
         "controller.instances_list"
       ],
       "predicted": [
-        "gateway.service_clusters_nodes_list"
+        "gateway.service_nodes_list"
       ],
       "hallucinated": [],
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
       "candidates": 3,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ServiceNode",
+      "exp_src": "Platform",
+      "exp_tgt": "Instance",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "synonym_automation_runs",
@@ -1139,7 +1516,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "UnifiedJob",
+      "exp_src": "Platform",
+      "exp_tgt": "UnifiedJob",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_login_providers",
@@ -1148,14 +1531,20 @@
         "gateway.authenticators_list"
       ],
       "predicted": [
-        "gateway.authenticators_list"
+        "gateway.authenticator_maps_authenticators_list"
       ],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "AuthenticatorMap",
+      "pred_tgt": "Authenticator",
+      "exp_src": "Platform",
+      "exp_tgt": "Authenticator",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "synonym_api_keys",
@@ -1164,14 +1553,20 @@
         "gateway.tokens_list"
       ],
       "predicted": [
-        "gateway.tokens_list"
+        "gateway.service_keys_list"
       ],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ServiceKey",
+      "exp_src": "Platform",
+      "exp_tgt": "Token",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "synonym_pipelines",
@@ -1187,7 +1582,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "WorkflowJobTemplate",
+      "exp_src": "Platform",
+      "exp_tgt": "WorkflowJobTemplate",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_rule_engines",
@@ -1203,7 +1604,13 @@
       "recall": 0.0,
       "f1": 0,
       "candidates": 1,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Rulebook",
+      "exp_src": "Platform",
+      "exp_tgt": "DecisionEnvironment",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "synonym_event_feeds",
@@ -1211,15 +1618,19 @@
       "expected": [
         "eda.event_streams_list"
       ],
-      "predicted": [
-        "eda.event_streams_list"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "DecisionEnvironment",
+      "pred_tgt": "EventStream",
+      "exp_src": "Platform",
+      "exp_tgt": "EventStream",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "synonym_pending_approvals",
@@ -1227,15 +1638,19 @@
       "expected": [
         "controller.workflow_approvals_list"
       ],
-      "predicted": [
-        "controller.workflow_approvals_list"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "WorkflowJobNode",
+      "pred_tgt": "WorkflowApproval",
+      "exp_src": "Platform",
+      "exp_tgt": "WorkflowApproval",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "synonym_user_access_token",
@@ -1244,14 +1659,20 @@
         "gateway.users_tokens_retrieve"
       ],
       "predicted": [
-        "gateway.users_personal_tokens_retrieve"
+        "gateway.users_tokens_retrieve"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "User",
+      "pred_tgt": "Token",
+      "exp_src": "User",
+      "exp_tgt": "Token",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_org_repos",
@@ -1260,14 +1681,20 @@
         "controller.organizations_projects_create"
       ],
       "predicted": [
-        "controller.organizations_projects_list"
+        "controller.organizations_projects_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Organization",
+      "pred_tgt": "Project",
+      "exp_src": "Organization",
+      "exp_tgt": "Project",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_host_inventory",
@@ -1276,14 +1703,20 @@
         "controller.inventories_groups_create"
       ],
       "predicted": [
-        "controller.inventories_groups_list"
+        "controller.inventories_groups_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Inventory",
+      "pred_tgt": "Group",
+      "exp_src": "Inventory",
+      "exp_tgt": "Group",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "ambiguous_platform_activity",
@@ -1292,22 +1725,20 @@
         "controller.activity_stream_list"
       ],
       "predicted": [
-        "controller.activity_stream_list",
-        "controller.jobs_list",
-        "controller.unified_jobs_list",
-        "controller.metrics_retrieve",
-        "eda.activations_list",
-        "eda.activation_instances_list",
-        "eda.status_retrieve",
-        "gateway.activitystream_list",
-        "gateway.status_retrieve"
+        "controller.activity_stream_list"
       ],
       "hallucinated": [],
-      "precision": 0.1111111111111111,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.19999999999999998,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 0.2222222222222222
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ActivityStream",
+      "exp_src": "Platform",
+      "exp_tgt": "ActivityStream",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "ambiguous_deploy_status",
@@ -1316,14 +1747,20 @@
         "controller.jobs_list"
       ],
       "predicted": [
-        "controller.jobs_list"
+        "controller.unified_jobs_list"
       ],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "UnifiedJob",
+      "exp_src": "Platform",
+      "exp_tgt": "Job",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_about_host",
@@ -1331,13 +1768,21 @@
       "expected": [
         "controller.hosts_ansible_facts_retrieve"
       ],
-      "predicted": [],
+      "predicted": [
+        "controller.hosts_all_groups_list"
+      ],
       "hallucinated": [],
-      "precision": 0,
+      "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
       "candidates": 1,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Host",
+      "exp_src": "Host",
+      "exp_tgt": "AnsibleFacts",
+      "src_ok": false,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_project_state",
@@ -1346,14 +1791,20 @@
         "controller.projects_project_updates_list"
       ],
       "predicted": [
-        "controller.projects_retrieve"
+        "controller.projects_update"
       ],
       "hallucinated": [],
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
       "candidates": 3,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Project",
+      "pred_tgt": "Project",
+      "exp_src": "Project",
+      "exp_tgt": "ProjectUpdate",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_who_access",
@@ -1362,15 +1813,20 @@
         "controller.users_list"
       ],
       "predicted": [
-        "controller.role_user_assignments_list",
-        "controller.role_team_assignments_list"
+        "controller.users_list"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 4,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "User",
+      "exp_src": "Platform",
+      "exp_tgt": "User",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "ambiguous_check_everything",
@@ -1379,16 +1835,21 @@
         "controller.instances_list"
       ],
       "predicted": [
-        "eda.status_retrieve",
-        "galaxy.pulp_v3_status_get",
-        "gateway.status_retrieve"
+        "controller.instances_list",
+        "controller.instances_health_check_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
       "candidates": 3,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.5,
+      "pred_src": "Platform",
+      "pred_tgt": "InstanceHealthCheck",
+      "exp_src": "Platform",
+      "exp_tgt": "Instance",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_what_failed",
@@ -1397,20 +1858,20 @@
         "controller.unified_jobs_list"
       ],
       "predicted": [
-        "controller.jobs_list",
-        "controller.project_updates_list",
-        "controller.inventory_updates_list",
-        "controller.ad_hoc_commands_list",
-        "controller.system_jobs_list",
-        "eda.activations_list",
-        "eda.activation_instances_list"
+        "controller.unified_jobs_list"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "UnifiedJob",
+      "exp_src": "Platform",
+      "exp_tgt": "UnifiedJob",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "ambiguous_show_connections",
@@ -1419,15 +1880,20 @@
         "gateway.authenticators_list"
       ],
       "predicted": [
-        "gateway.authenticator_maps_list",
-        "gateway.authenticators_list"
+        "gateway.authenticator_maps_list"
       ],
       "hallucinated": [],
-      "precision": 0.5,
-      "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 1,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "AuthenticatorMap",
+      "exp_src": "Platform",
+      "exp_tgt": "Authenticator",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_inventory_details",
@@ -1436,19 +1902,20 @@
         "controller.inventories_groups_create"
       ],
       "predicted": [
-        "controller.inventories_retrieve",
-        "controller.inventories_groups_list",
-        "controller.inventories_hosts_list",
-        "controller.inventories_inventory_sources_list",
-        "controller.inventories_tree_retrieve",
-        "controller.inventories_variable_data_retrieve"
+        "controller.inventories_update"
       ],
       "hallucinated": [],
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 0.16666666666666666
+      "graph_valid_precision": 0.0,
+      "pred_src": "Inventory",
+      "pred_tgt": "Inventory",
+      "exp_src": "Inventory",
+      "exp_tgt": "Group",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_workflow_progress",
@@ -1456,15 +1923,19 @@
       "expected": [
         "controller.workflow_jobs_workflow_nodes_list"
       ],
-      "predicted": [
-        "controller.workflow_jobs_retrieve"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 0.0,
+      "precision": 0,
       "recall": 0.0,
       "f1": 0,
       "candidates": 1,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "WorkflowJob",
+      "pred_tgt": "WorkflowJob",
+      "exp_src": "WorkflowJob",
+      "exp_tgt": "WorkflowJobNode",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_what_can_user_do",
@@ -1473,15 +1944,20 @@
         "controller.users_organizations_retrieve"
       ],
       "predicted": [
-        "controller.users_list",
-        "controller.users_roles_list"
+        "controller.users_roles_create"
       ],
       "hallucinated": [],
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "User",
+      "pred_tgt": "Role",
+      "exp_src": "User",
+      "exp_tgt": "Organization",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_who_is_on_team",
@@ -1490,14 +1966,20 @@
         "controller.teams_users_create"
       ],
       "predicted": [
-        "gateway.teams_users_list"
+        "controller.teams_users_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Team",
+      "pred_tgt": "User",
+      "exp_src": "Team",
+      "exp_tgt": "User",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "ambiguous_org_templates",
@@ -1506,15 +1988,20 @@
         "controller.organizations_job_templates_create"
       ],
       "predicted": [
-        "controller.organizations_job_templates_list",
-        "controller.organizations_workflow_job_templates_list"
+        "controller.organizations_job_templates_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Organization",
+      "pred_tgt": "JobTemplate",
+      "exp_src": "Organization",
+      "exp_tgt": "JobTemplate",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "ambiguous_events_triggered",
@@ -1522,19 +2009,19 @@
       "expected": [
         "controller.jobs_job_events_list"
       ],
-      "predicted": [
-        "controller.activity_stream_list",
-        "controller.jobs_list",
-        "controller.jobs_job_events_list",
-        "controller.workflow_jobs_list",
-        "controller.workflow_jobs_workflow_nodes_list"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 0.2,
-      "recall": 1.0,
-      "f1": 0.33333333333333337,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 1,
-      "graph_valid_precision": 0.2
+      "graph_valid_precision": 0.0,
+      "pred_src": "ActivationInstance",
+      "pred_tgt": "Job",
+      "exp_src": "Job",
+      "exp_tgt": "JobEvent",
+      "src_ok": false,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_cred_permissions",
@@ -1543,14 +2030,21 @@
         "controller.credentials_object_roles_list"
       ],
       "predicted": [
-        "controller.credentials_access_list_list"
+        "controller.credentials_object_roles_list",
+        "controller.roles_users_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
       "candidates": 1,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.5,
+      "pred_src": "Credential",
+      "pred_tgt": "User",
+      "exp_src": "Credential",
+      "exp_tgt": "Role",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "noisy_backup_failed",
@@ -1566,7 +2060,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Job",
+      "pred_tgt": "UnifiedJobStdout",
+      "exp_src": "Job",
+      "exp_tgt": "UnifiedJobStdout",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_host_broken",
@@ -1575,15 +2075,20 @@
         "controller.hosts_ansible_facts_retrieve"
       ],
       "predicted": [
-        "controller.hosts_retrieve",
         "controller.hosts_ansible_facts_retrieve"
       ],
       "hallucinated": [],
-      "precision": 0.5,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Host",
+      "pred_tgt": "AnsibleFacts",
+      "exp_src": "Host",
+      "exp_tgt": "AnsibleFacts",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_cancel_job",
@@ -1599,7 +2104,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Job",
+      "pred_tgt": "JobCancel",
+      "exp_src": "Job",
+      "exp_tgt": "JobCancel",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_cred_wrong",
@@ -1615,7 +2126,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Credential",
+      "exp_src": "Platform",
+      "exp_tgt": "Credential",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_audit_team",
@@ -1624,15 +2141,20 @@
         "controller.organizations_teams_create"
       ],
       "predicted": [
-        "controller.organizations_retrieve",
-        "controller.organizations_teams_list"
+        "controller.organizations_teams_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 4,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Organization",
+      "pred_tgt": "Team",
+      "exp_src": "Organization",
+      "exp_tgt": "Team",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_cluster_slow",
@@ -1641,14 +2163,22 @@
         "controller.instances_list"
       ],
       "predicted": [
-        "controller.instances_list"
+        "controller.jobs_create_schedule_create",
+        "controller.schedules_instance_groups_create",
+        "controller.instance_groups_instances_create"
       ],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Job",
+      "pred_tgt": "Instance",
+      "exp_src": "Platform",
+      "exp_tgt": "Instance",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "noisy_org_confusion",
@@ -1657,14 +2187,20 @@
         "controller.organizations_admins_list"
       ],
       "predicted": [
-        "controller.job_templates_list"
+        "controller.organizations_admins_list"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 6,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Organization",
+      "exp_src": "Platform",
+      "exp_tgt": "Organization",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_inventory_drift",
@@ -1673,14 +2209,20 @@
         "controller.inventories_inventory_sources_create"
       ],
       "predicted": [
-        "controller.inventory_sources_list"
+        "controller.inventories_inventory_sources_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Inventory",
+      "pred_tgt": "InventorySource",
+      "exp_src": "Inventory",
+      "exp_tgt": "InventorySource",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_workflow_approval_stuck",
@@ -1688,15 +2230,19 @@
       "expected": [
         "controller.workflow_approvals_list"
       ],
-      "predicted": [
-        "controller.workflow_approvals_list"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "WorkflowJob",
+      "pred_tgt": "WorkflowApproval",
+      "exp_src": "Platform",
+      "exp_tgt": "WorkflowApproval",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "noisy_ldap_broken",
@@ -1712,7 +2258,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Authenticator",
+      "exp_src": "Platform",
+      "exp_tgt": "Authenticator",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_token_expired",
@@ -1721,15 +2273,20 @@
         "gateway.users_tokens_retrieve"
       ],
       "predicted": [
-        "gateway.users_retrieve",
         "gateway.users_tokens_retrieve"
       ],
       "hallucinated": [],
-      "precision": 0.5,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "User",
+      "pred_tgt": "Token",
+      "exp_src": "User",
+      "exp_tgt": "Token",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_eda_broken",
@@ -1745,7 +2302,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Activation",
+      "exp_src": "Platform",
+      "exp_tgt": "Activation",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_job_per_host",
@@ -1754,15 +2317,20 @@
         "controller.jobs_job_host_summaries_list"
       ],
       "predicted": [
-        "controller.jobs_retrieve",
         "controller.jobs_job_host_summaries_list"
       ],
       "hallucinated": [],
-      "precision": 0.5,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Job",
+      "pred_tgt": "JobHostSummary",
+      "exp_src": "Job",
+      "exp_tgt": "JobHostSummary",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_exec_env_missing",
@@ -1778,7 +2346,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ExecutionEnvironment",
+      "exp_src": "Platform",
+      "exp_tgt": "ExecutionEnvironment",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_user_wrong_team",
@@ -1787,14 +2361,20 @@
         "controller.teams_users_create"
       ],
       "predicted": [
-        "controller.teams_users_list"
+        "controller.teams_users_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Team",
+      "pred_tgt": "User",
+      "exp_src": "Team",
+      "exp_tgt": "User",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_org_inventories",
@@ -1803,15 +2383,20 @@
         "controller.organizations_inventories_list"
       ],
       "predicted": [
-        "controller.organizations_retrieve",
         "controller.organizations_inventories_list"
       ],
       "hallucinated": [],
-      "precision": 0.5,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Organization",
+      "pred_tgt": "Inventory",
+      "exp_src": "Organization",
+      "exp_tgt": "Inventory",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_org_projects",
@@ -1820,15 +2405,20 @@
         "controller.organizations_projects_create"
       ],
       "predicted": [
-        "controller.organizations_retrieve",
-        "controller.organizations_projects_list"
+        "controller.organizations_projects_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Organization",
+      "pred_tgt": "Project",
+      "exp_src": "Organization",
+      "exp_tgt": "Project",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_group_hosts",
@@ -1837,14 +2427,20 @@
         "controller.groups_all_hosts_list"
       ],
       "predicted": [
-        "controller.groups_hosts_list"
+        "controller.groups_all_hosts_list"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Group",
+      "pred_tgt": "Host",
+      "exp_src": "Group",
+      "exp_tgt": "Host",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_template_credentials",
@@ -1853,14 +2449,20 @@
         "controller.job_templates_credentials_create"
       ],
       "predicted": [
-        "controller.job_templates_credentials_list"
+        "controller.job_templates_credentials_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "JobTemplate",
+      "pred_tgt": "Credential",
+      "exp_src": "JobTemplate",
+      "exp_tgt": "Credential",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_template_labels",
@@ -1869,14 +2471,20 @@
         "controller.workflow_job_templates_labels_create"
       ],
       "predicted": [
-        "controller.workflow_job_templates_labels_list"
+        "controller.workflow_job_templates_labels_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "WorkflowJobTemplate",
+      "pred_tgt": "Label",
+      "exp_src": "WorkflowJobTemplate",
+      "exp_tgt": "Label",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_org_notification_templates",
@@ -1885,14 +2493,20 @@
         "controller.organizations_notification_templates_create"
       ],
       "predicted": [
-        "controller.organizations_notification_templates_list"
+        "controller.organizations_notification_templates_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 8,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Organization",
+      "pred_tgt": "NotificationTemplate",
+      "exp_src": "Organization",
+      "exp_tgt": "NotificationTemplate",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_org_exec_envs",
@@ -1901,14 +2515,20 @@
         "controller.organizations_execution_environments_create"
       ],
       "predicted": [
-        "controller.organizations_execution_environments_list"
+        "controller.organizations_execution_environments_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Organization",
+      "pred_tgt": "ExecutionEnvironment",
+      "exp_src": "Organization",
+      "exp_tgt": "ExecutionEnvironment",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_user_credentials",
@@ -1917,15 +2537,20 @@
         "controller.users_credentials_create"
       ],
       "predicted": [
-        "controller.users_retrieve",
-        "controller.users_credentials_list"
+        "controller.users_credentials_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "User",
+      "pred_tgt": "Credential",
+      "exp_src": "User",
+      "exp_tgt": "Credential",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_inv_source_creds",
@@ -1934,15 +2559,20 @@
         "controller.inventory_sources_credentials_create"
       ],
       "predicted": [
-        "controller.inventory_sources_list",
-        "controller.inventory_sources_credentials_list"
+        "controller.inventory_sources_credentials_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "InventorySource",
+      "pred_tgt": "Credential",
+      "exp_src": "InventorySource",
+      "exp_tgt": "Credential",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_org_job_templates",
@@ -1951,14 +2581,20 @@
         "controller.organizations_job_templates_create"
       ],
       "predicted": [
-        "controller.organizations_job_templates_list"
+        "controller.organizations_job_templates_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Organization",
+      "pred_tgt": "JobTemplate",
+      "exp_src": "Organization",
+      "exp_tgt": "JobTemplate",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_cred_input_sources",
@@ -1967,14 +2603,20 @@
         "controller.credentials_input_sources_create"
       ],
       "predicted": [
-        "controller.credentials_input_sources_list"
+        "controller.credentials_input_sources_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Credential",
+      "pred_tgt": "CredentialInputSource",
+      "exp_src": "Credential",
+      "exp_tgt": "CredentialInputSource",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_cred_copy",
@@ -1983,14 +2625,20 @@
         "controller.credentials_copy_create"
       ],
       "predicted": [
-        "controller.credentials_copy_create"
+        "controller.credentials_update"
       ],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Credential",
+      "pred_tgt": "Credential",
+      "exp_src": "Credential",
+      "exp_tgt": "Copy",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "multipath_job_host_summary",
@@ -1999,15 +2647,20 @@
         "controller.jobs_job_host_summaries_list"
       ],
       "predicted": [
-        "controller.jobs_retrieve",
         "controller.jobs_job_host_summaries_list"
       ],
       "hallucinated": [],
-      "precision": 0.5,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Job",
+      "pred_tgt": "JobHostSummary",
+      "exp_src": "Job",
+      "exp_tgt": "JobHostSummary",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_project_schedules",
@@ -2016,14 +2669,20 @@
         "controller.projects_schedules_create"
       ],
       "predicted": [
-        "controller.projects_schedules_list"
+        "controller.projects_schedules_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Project",
+      "pred_tgt": "Schedule",
+      "exp_src": "Project",
+      "exp_tgt": "Schedule",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_org_wf_templates",
@@ -2032,15 +2691,20 @@
         "controller.organizations_workflow_job_templates_create"
       ],
       "predicted": [
-        "controller.organizations_retrieve",
-        "controller.organizations_workflow_job_templates_list"
+        "controller.organizations_workflow_job_templates_create"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Organization",
+      "pred_tgt": "WorkflowJobTemplate",
+      "exp_src": "Organization",
+      "exp_tgt": "WorkflowJobTemplate",
+      "src_ok": true,
+      "tgt_ok": true
     }
   ]
 }

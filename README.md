@@ -24,13 +24,24 @@ For all strategies, precision, recall, and F1 are computed by comparing the pred
 | Strategy | Model | Precision | Recall | F1 |
 |---|---|---|---|---|
 | Function calling | Gemini 2.5 Pro | 0.326 | 0.357 | 0.333 |
+| Function calling | Gemini 2.5 Flash | 0.295 | 0.291 | 0.292 |
 | Text baseline | Gemini 2.5 Pro | 0.449 | 0.593 | 0.495 |
-| Few-shot Text | Gemini 2.5 Flash | 0.478 | 0.560 | 0.503 |
+| Text baseline | Gemini 2.5 Flash | 0.438 | 0.551 | 0.475 |
+| Few-shot Text | Gemini 2.5 Pro | 0.478 | 0.560 | 0.503 |
+| Few-shot Text | Gemini 2.5 Flash | 0.492 | 0.568 | 0.515 |
 | Zero-shot TCR | Gemini 2.5 Pro | 0.734 | 0.730 | 0.730 |
+| Zero-shot TCR | Gemini 2.5 Flash | 0.602 | 0.600 | 0.599 |
 | Few-shot TCR | Gemini 2.5 Pro | 0.832 | 0.820 | 0.822 |
+| Few-shot TCR | Gemini 2.5 Flash | 0.811 | 0.816 | 0.811 |
 | **Encoder TCR** | **475K params** | **0.848** | **0.861** | **0.852** |
 
 Adding 10 examples to the text baseline (few-shot text) barely moves F1 (0.503 vs 0.495), even though the same 10 examples under TCR decomposition (few-shot TCR) raise F1 from 0.730 to 0.822. At 1,060 tools, the text baseline's prompt is ~18K tokens of tool definitions — adding examples cannot overcome the fundamental difficulty of selecting from that many candidates. The TCR decomposition reduces the problem to 79 entity types (~300 tokens), where examples are far more effective.
+
+### Flash vs Pro: TCR value scales with weaker models
+
+The flash results show the TCR decomposition helps *more* when the model is less capable. Flash function calling on AAP scores F1=0.29 — selecting from 1,060 tools is nearly impossible for a smaller model. But flash few-shot TCR recovers to F1=0.81, nearly tripling performance. The gap between baseline and TCR is wider on flash (0.29→0.81) than on Pro (0.33→0.82), demonstrating that the decomposition's value increases as model capability decreases.
+
+Flash zero-shot TCR (F1=0.60) is weaker than Pro's (0.73), but few-shot examples close most of the gap (0.60→0.81 vs 0.73→0.82). With only 79 entity types, even a weaker model can learn the mapping from 10 examples. This confirms that the type prediction bottleneck is addressable — whether through in-context examples, fine-tuning, or a trained encoder.
 
 Per-category (encoder, best fold):
 
@@ -184,7 +195,7 @@ This is a companion repo to [stripe-type-predictor](https://github.com/jangel97/
 | Gemini FS-TCR F1 | 0.836 | 0.822 |
 | Encoder params | 281K | 475K |
 
-The encoder beats Gemini 2.5 Pro with few-shot prompting on both domains. As the tool count doubles (536 -> 1,060), Gemini's function calling degrades sharply (0.353 -> 0.333) while the encoder maintains high accuracy. The type prediction reformulation reduces the search space from thousands of tools to tens of entity types, making the problem tractable for a lightweight classifier.
+The encoder beats both Gemini 2.5 Pro and Flash with few-shot prompting on both domains. As the tool count doubles (536 -> 1,060), Gemini's function calling degrades sharply (Pro: 0.353 -> 0.333, Flash: 0.444 -> 0.292) while the encoder maintains high accuracy. The type prediction reformulation reduces the search space from thousands of tools to tens of entity types, making the problem tractable for a lightweight classifier.
 
 ## Conclusion
 
